@@ -59,6 +59,9 @@ class InstagramApp {
         // Mobile navigation
         this.setupMobileNavigation();
 
+        // Mobile menu toggle
+        this.setupMobileMenu();
+
         // Keyboard navigation
         this.setupKeyboardNavigation();
     }
@@ -405,6 +408,54 @@ class InstagramApp {
                 document.body.classList.remove('mobile-view');
             }
         });
+    }
+
+    setupMobileMenu() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const menuClose = document.querySelector('.mobile-menu-close');
+        const menuOverlay = document.querySelector('.mobile-menu-overlay');
+        const menuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                menuOverlay.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+        }
+
+        if (menuClose) {
+            menuClose.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        }
+
+        // Close menu when clicking on overlay
+        if (menuOverlay) {
+            menuOverlay.addEventListener('click', (e) => {
+                if (e.target === menuOverlay) {
+                    menuToggle.classList.remove('active');
+                    menuOverlay.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+        }
+
+        // Close menu when clicking on menu links
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Prevent body scroll when menu is open
+        menuOverlay.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+        }, { passive: false });
     }
 
     setupKeyboardNavigation() {
