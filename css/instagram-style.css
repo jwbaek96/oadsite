@@ -526,31 +526,34 @@ body {
     padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .hero-content {
-    text-align: center;
+    text-align: left;
     max-width: 800px;
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 500;
     margin-bottom: 20px;
-    line-height: 1.2;
+    line-height: .9;
 }
 
 .brand-highlight {
+    white-space: nowrap;
+    font-family: "Inter", "Noto Sans KR", sans-serif;
     background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 5.5rem;
+    font-weight: 700;
+    font-size: 3.5rem;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     margin-bottom: 30px;
     opacity: 0.9;
 }
@@ -732,30 +735,30 @@ body {
 /* Large Desktop */
 @media (min-width: 1400px) {
     .hero-title {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     
     .brand-highlight {
-        font-size: 6rem;
+        font-size: 3rem;
     }
     
     .hero-subtitle {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
     }
 }
 
 /* Desktop */
 @media (max-width: 1399px) and (min-width: 1025px) {
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     
     .brand-highlight {
-        font-size: 5.5rem;
+        font-size: 4rem;
     }
     
     .hero-subtitle {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -766,7 +769,7 @@ body {
     }
     
     .brand-highlight {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
     }
     
     .hero-subtitle {

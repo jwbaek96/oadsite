@@ -4,485 +4,281 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OA Design Studio - 오에이디자인스튜디오</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="OA Design Studio - 창의적인 디자인과 아트워크를 선보이는 오에이디자인스튜디오의 공식 블로그입니다.">
-    <meta name="keywords" content="디자인, 아트워크, 그래픽 디자인, 브랜딩, 웹 디자인, OA Design Studio">
-    <meta name="author" content="OA Design Studio">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="OA Design Studio - 오에이디자인스튜디오">
-    <meta property="og:description" content="창의적인 디자인과 아트워크를 선보이는 오에이디자인스튜디오의 공식 블로그">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jwbaek96.github.io/oadsite">
-    <meta property="og:image" content="https://jwbaek96.github.io/oadsite/assets/og-image.jpg">
-    <meta property="og:site_name" content="OA Design Studio">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="OA Design Studio - 오에이디자인스튜디오">
-    <meta name="twitter:description" content="창의적인 디자인과 아트워크를 선보이는 오에이디자인스튜디오의 공식 블로그">
-    <meta name="twitter:image" content="https://jwbaek96.github.io/oadsite/assets/og-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "OA Design Studio",
-        "alternateName": "오에이디자인스튜디오",
-        "url": "https://jwbaek96.github.io/oadsite",
-        "logo": "https://jwbaek96.github.io/oadsite/assets/Logo.png",
-        "description": "창의적인 디자인과 아트워크를 선보이는 디자인 스튜디오",
-        "sameAs": [
-            "https://instagram.com/oadesignstudio",
-            "https://behance.net/oadesignstudio"
-        ]
-    }
-    </script>
+    <meta name="description" content="창의적인 디자인으로 브랜드 스토리를 만들어갑니다">
+    <link rel="stylesheet" href="./css/instagram-style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <!-- fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 </head>
+<body data-no-auto-footer="true">
+    <!-- Background Video -->
+    <video autoplay muted loop class="background-video">
+        <source src="assets/bg.mp4" type="video/mp4">
+        <!-- Fallback for browsers that don't support video -->
+    </video>
+    
+    <!-- Background Overlay -->
+    <div class="background-overlay"></div>
+    
+    <!-- Desktop Layout -->
+    <div class="instagram-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <!-- Logo -->
+                <div class="logo-section">
+                    <a href="index.html" class="logo" aria-label="OA Design Studio 홈페이지">
+                        <img src="assets/Logo.png" alt="OA Design Studio Logo" width="120" height="40">
+                    </a>
+                </div>
 
-<body data-no-auto-footer>
-    <!-- Header -->
-    <header class="header" role="banner">
-        <nav class="nav" role="navigation" aria-label="Main navigation">
-            <div class="nav-container">
-                <a href="index.html" class="logo" aria-label="OA Design Studio 홈페이지">
-                    <img src="assets/Logo.png" alt="OA Design Studio Logo" width="120" height="40">
-                </a>
-                
-                <button class="mobile-menu-toggle" aria-label="모바일 메뉴 열기" aria-expanded="false">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-                
-                <ul class="nav-menu" role="menubar">
-                    <li role="none"><a href="index_backup.html" role="menuitem" class="nav-link active">Home</a></li>
-                    <li role="none"><a href="blog.html" role="menuitem" class="nav-link">Blog</a></li>
-                    <li role="none"><a href="artwork.html" role="menuitem" class="nav-link">Artwork</a></li>
-                    <li role="none"><a href="#about" role="menuitem" class="nav-link">About</a></li>
-                    <li role="none"><a href="#contact" role="menuitem" class="nav-link">Contact</a></li>
-                    <li role="none"><button id="admin-btn" class="nav-link admin-btn" style="display: none;">Admin</button></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main" role="main">
-        <!-- Hero Section -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1 id="hero-title" class="hero-title">
-                        Welcome to <span class="brand-highlight">OA Design Studio</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        창의적인 디자인과 아트워크로 브랜드 스토리를 만들어갑니다
-                    </p>
-                    <div class="hero-actions">
-                        <a href="blog.html" class="btn btn-primary">Latest Posts</a>
-                        <a href="artwork.html" class="btn btn-secondary">View Artwork</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-image-container">
-                        <img src="assets/hero-image.jpg" alt="OA Design Studio 작업 공간" class="hero-image" loading="eager">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Posts Section -->
-        <section class="featured-posts" aria-labelledby="featured-title">
-            <div class="container">
-                <h2 id="featured-title" class="section-title">Featured Posts</h2>
-                <div class="posts-grid" id="featured-posts-grid">
-                    <!-- Featured posts will be loaded here -->
-                    <div class="loading-skeleton">
-                        <div class="skeleton-card"></div>
-                        <div class="skeleton-card"></div>
-                        <div class="skeleton-card"></div>
-                    </div>
-                </div>
-                <div class="section-actions">
-                    <a href="blog.html" class="btn btn-outline">View All Posts</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services" aria-labelledby="services-title">
-            <div class="container">
-                <h2 id="services-title" class="section-title">Our Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Web Development</h3>
-                        <p class="service-description">사용자 경험을 중심으로 한 현대적인 웹 솔루션을 개발합니다.</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6,9 6,2 18,2 18,9"></polyline>
-                                <path d="M6 18H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2"></path>
-                                <rect x="6" y="14" width="12" height="8"></rect>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Print Design</h3>
-                        <p class="service-description">명함, 브로셔, 포스터 등 다양한 인쇄물 디자인을 제공합니다.</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14,2 14,8 20,8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                                <polyline points="10,9 9,9 8,9"></polyline>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">PPT Design</h3>
-                        <p class="service-description">효과적인 프레젠테이션을 위한 전문적인 PPT 디자인을 제작합니다.</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="3"></circle>
-                                <path d="M12 1v6m0 6v6"></path>
-                                <path d="m21 12-6-3-6 3 6 3z"></path>
-                                <path d="m21 12-6 3-6-3 6-3z"></path>
-                                <path d="M3 12l6-3 6 3-6 3z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">AI Content</h3>
-                        <p class="service-description">AI 기술을 활용한 창의적인 컨텐츠 제작 및 디자인 솔루션을 제공합니다.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about" id="about" aria-labelledby="about-title">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2 id="about-title" class="section-title">About OA Design Studio</h2>
-                        <p class="about-description">
-                            OA Design Studio는 창의적인 디자인 솔루션을 통해 브랜드의 가치를 높이는 디자인 스튜디오입니다. 
-                            웹 디자인, 브랜드 아이덴티티, 그래픽 디자인 등 다양한 분야에서 고객의 비전을 현실로 만들어 드립니다.
-                        </p>
-                        <p class="about-description">
-                            우리는 각 프로젝트에 대한 깊은 이해와 창의적인 접근 방식을 통해 독창적이면서도 효과적인 디자인을 제공합니다.
-                        </p>
-                        <div class="about-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">50+</span>
-                                <span class="stat-label">Projects</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">30+</span>
-                                <span class="stat-label">Clients</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">3+</span>
-                                <span class="stat-label">Years</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image">
-                        <img src="assets/about-image.jpg" alt="OA Design Studio 팀" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo" id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-title">OA Design Studio</h3>
-                    <p class="footer-description">
-                        창의적인 디자인으로 브랜드 스토리를 만들어갑니다.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Instagram" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.40s-.644-1.44-1.439-1.40z"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="Behance" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="GitHub" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#" class="footer-link">Web Development</a></li>
-                        <li><a href="#" class="footer-link">Print Design</a></li>
-                        <li><a href="#" class="footer-link">PPT Design</a></li>
-                        <li><a href="#" class="footer-link">AI Content</a></li>
+                <!-- Main Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link" data-tooltip="HOME">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                                </svg>
+                                <span class="nav-text">HOME</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-tooltip="ABOUT">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <span class="nav-text">ABOUT</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-tooltip="WORKS">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                                <span class="nav-text">WORKS</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-tooltip="STORY">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <circle cx="9" cy="9" r="2"></circle>
+                                    <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+                                </svg>
+                                <span class="nav-text">STORY</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-tooltip="CONTACT">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                <span class="nav-text">CONTACT</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-tooltip="NOTICE">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                </svg>
+                                <span class="nav-text">NOTICE</span>
+                            </a>
+                        </li>
                     </ul>
+                </nav>
+
+                <!-- More Options -->
+                <div class="more-section">
+                    <a href="#" class="nav-link" data-tooltip="더 보기">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                        <span class="nav-text">더 보기</span>
+                    </a>
                 </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Pages</h4>
-                    <ul class="footer-links">
-                        <li><a href="./index.html" class="footer-link">Home</a></li>
-                        <li><a href="./blog.html" class="footer-link">Blog</a></li>
-                        <li><a href="./artwork.html" class="footer-link">Artwork</a></li>
-                        <li><a href="#about" class="footer-link">About</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-subtitle">Contact</h4>
-                    <div class="contact-info">
-                        <p class="contact-item">
-                            <span class="contact-label">Email:</span>
-                            <a href="mailto:hello@oadesignstudio.com" class="contact-link">hello@oadesignstudio.com</a>
-                        </p>
-                        <p class="contact-item">
-                            <span class="contact-label">Phone:</span>
-                            <a href="tel:+82-10-1234-5678" class="contact-link">+82 10-1234-5678</a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <h1 id="hero-title" class="hero-title">
+                            The Way To Find <span class="brand-highlight">Original Answer</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            창의적인 디자인과 아트워크로 브랜드 스토리를 만들어갑니다
                         </p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="copyright">
-                    &copy; <span id="current-year">2024</span> OA Design Studio. All rights reserved.
-                </p>
-                <div class="footer-nav">
-                    <a href="#" class="footer-nav-link">Privacy Policy</a>
-                    <a href="#" class="footer-nav-link">Terms of Service</a>
+            </section>
+
+            <!-- Featured Posts Section -->
+            <section class="featured-posts" aria-labelledby="featured-title">
+                <div class="container">
+                    <h2 id="featured-title" class="section-title">Featured Posts</h2>
+                    <div class="posts-grid" id="featured-posts-grid">
+                        <!-- Featured posts will be loaded here -->
+                        <div class="loading-skeleton">
+                            <div class="skeleton-card"></div>
+                            <div class="skeleton-card"></div>
+                            <div class="skeleton-card"></div>
+                        </div>
+                    </div>
+                    <div class="section-actions">
+                        <a href="blog.html" class="btn btn-outline">View All Posts</a>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </footer>
+            </section>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="맨 위로 이동" style="display: none;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="18,15 12,9 6,15"></polyline>
-        </svg>
-    </button>
+            <!-- Services Section -->
+            <section class="services" aria-labelledby="services-title">
+                <div class="container">
+                    <h2 id="services-title" class="section-title">Our Services</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Web Development</h3>
+                            <p class="service-description">사용자 경험을 중심으로 한 현대적인 웹 솔루션을 개발합니다.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6,9 6,2 18,2 18,9"></polyline>
+                                    <path d="M6 18H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2"></path>
+                                    <rect x="6" y="14" width="12" height="8"></rect>
+                                </svg>
+                            </div>
+                            <h3 class="service-title">Print Design</h3>
+                            <p class="service-description">명함, 브로셔, 포스터 등 다양한 인쇄물 디자인을 제공합니다.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14,2 14,8 20,8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10,9 9,9 8,9"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="service-title">PPT Design</h3>
+                            <p class="service-description">효과적인 프레젠테이션을 위한 전문적인 PPT 디자인을 제작합니다.</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M12 1v6m0 6v6"></path>
+                                    <path d="m21 12-6-3-6 3 6 3z"></path>
+                                    <path d="m21 12-6 3-6-3 6-3z"></path>
+                                    <path d="M3 12l6-3 6 3-6 3z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="service-title">AI Content</h3>
+                            <p class="service-description">AI 기술을 활용한 창의적인 컨텐츠 제작 및 디자인 솔루션을 제공합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loading-overlay">
-        <div class="loading-spinner">
-            <div class="spinner"></div>
-            <p>Loading...</p>
-        </div>
+            <!-- About Section -->
+            <section class="about" id="about" aria-labelledby="about-title">
+                <div class="container">
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h2 id="about-title" class="section-title">About OA Design Studio</h2>
+                            <p class="about-description">
+                                OA Design Studio는 창의적인 디자인 솔루션을 통해 브랜드의 가치를 높이는 디자인 스튜디오입니다. 
+                                웹 디자인, 브랜드 아이덴티티, 그래픽 디자인 등 다양한 분야에서 고객의 비전을 현실로 만들어 드립니다.
+                            </p>
+                            <p class="about-description">
+                                우리는 각 프로젝트에 대한 깊은 이해와 창의적인 접근 방식을 통해 독창적이면서도 효과적인 디자인을 제공합니다.
+                            </p>
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">Projects</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">30+</span>
+                                    <span class="stat-label">Clients</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">3+</span>
+                                    <span class="stat-label">Years</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-image">
+                            <img src="assets/about-image.jpg" alt="OA Design Studio 팀" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="#" class="mobile-nav-item active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+            </svg>
+        </a>
+        <a href="#" class="mobile-nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </a>
+        <a href="#" class="mobile-nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+        </a>
+        <a href="#" class="mobile-nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10,9 9,9 8,9"></polyline>
+            </svg>
+        </a>
+        <a href="#" class="mobile-nav-item">
+            <div class="profile-pic-mobile">
+                <img src="https://via.placeholder.com/24/6366f1/ffffff?text=OA" alt="프로필">
+            </div>
+        </a>
+    </nav>
+
     <!-- Scripts -->
-    <script src="js/config.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/templates.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/home.js"></script>
-    <script>
-        // Initialize homepage
-        document.addEventListener('DOMContentLoaded', function() {
-            // Hide loading overlay
-            const loadingOverlay = document.getElementById('loading-overlay');
-            if (loadingOverlay) {
-                setTimeout(() => {
-                    loadingOverlay.style.display = 'none';
-                }, 500);
-            }
-            
-            // Load featured posts
-            loadFeaturedPosts();
-            
-            // Initialize mobile menu
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            if (mobileMenuToggle && navMenu) {
-                mobileMenuToggle.addEventListener('click', function() {
-                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                    this.setAttribute('aria-expanded', !isExpanded);
-                    navMenu.classList.toggle('active');
-                });
-            }
-            
-            // Initialize auth
-            if (typeof AuthManager !== 'undefined') {
-                AuthManager.init();
-            }
-            
-            // Back to top button functionality
-            const backToTopBtn = document.getElementById('back-to-top');
-            if (backToTopBtn) {
-                // Show/hide button based on scroll position
-                window.addEventListener('scroll', function() {
-                    if (window.pageYOffset > 300) {
-                        backToTopBtn.style.display = 'flex';
-                    } else {
-                        backToTopBtn.style.display = 'none';
-                    }
-                });
-                
-                // Smooth scroll to top
-                backToTopBtn.addEventListener('click', function() {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-            
-            // Update current year
-            const yearElement = document.getElementById('current-year');
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
-            }
-        });
-        
-        async function loadFeaturedPosts() {
-            const grid = document.getElementById('featured-posts-grid');
-            if (!grid) return;
-            
-            try {
-                // Show loading skeleton while fetching
-                grid.innerHTML = `
-                    <div class="loading-skeleton">
-                        <div class="skeleton-card"></div>
-                        <div class="skeleton-card"></div>
-                        <div class="skeleton-card"></div>
-                    </div>
-                `;
-                
-                // Check if APIs are available
-                if (typeof SheetsAPI !== 'undefined' && typeof CONFIG !== 'undefined') {
-                    // Try to fetch from API
-                    const response = await SheetsAPI.request(CONFIG.API.ENDPOINTS.GET_POSTS, {
-                        method: 'GET',
-                        data: { featured: true, limit: 3 }
-                    });
-                    
-                    if (response.success && response.data.posts.length > 0) {
-                        grid.innerHTML = '';
-                        response.data.posts.forEach(post => {
-                            const postCard = createPostCard(post);
-                            grid.appendChild(postCard);
-                        });
-                        return;
-                    }
-                }
-                
-                // Fallback: Show placeholder content
-                grid.innerHTML = `
-                    <div class="post-card-placeholder">
-                        <div class="post-image-placeholder"></div>
-                        <div class="post-content">
-                            <h3>Sample Blog Post</h3>
-                            <p>This is a sample blog post. Real posts will appear here once the backend is configured.</p>
-                            <div class="post-meta">
-                                <time>2024.10.29</time>
-                                <span class="tag">Design</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post-card-placeholder">
-                        <div class="post-image-placeholder"></div>
-                        <div class="post-content">
-                            <h3>Another Sample Post</h3>
-                            <p>Another example post to show the layout. Configure Google Apps Script to load real content.</p>
-                            <div class="post-meta">
-                                <time>2024.10.28</time>
-                                <span class="tag">Web Development</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post-card-placeholder">
-                        <div class="post-image-placeholder"></div>
-                        <div class="post-content">
-                            <h3>Getting Started</h3>
-                            <p>Learn how to set up your blog and start publishing amazing content.</p>
-                            <div class="post-meta">
-                                <time>2024.10.27</time>
-                                <span class="tag">Tutorial</span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-            } catch (error) {
-                console.error('Error loading featured posts:', error);
-                grid.innerHTML = `
-                    <div class="error-message">
-                        <p>포스트를 불러올 수 없습니다.</p>
-                        <button onclick="loadFeaturedPosts()" class="btn btn-small">다시 시도</button>
-                    </div>
-                `;
-            }
-        }
-        
-        function createPostCard(post) {
-            const article = document.createElement('article');
-            article.className = 'post-card';
-            article.innerHTML = `
-                <a href="./post.html?id=${post.id}" class="post-link">
-                    <div class="post-image">
-                        <img src="${post.thumbnail || './assets/default-thumbnail.jpg'}" 
-                             alt="${post.title}" 
-                             loading="lazy">
-                    </div>
-                    <div class="post-content">
-                        <h3 class="post-title">${post.title}</h3>
-                        <p class="post-excerpt">${post.excerpt || ''}</p>
-                        <div class="post-meta">
-                            <time class="post-date" datetime="${post.date}">
-                                ${new Date(post.date).toLocaleDateString('ko-KR')}
-                            </time>
-                            <div class="post-tags">
-                                ${post.tags ? post.tags.split(',').slice(0, 2).map(tag => 
-                                    `<span class="tag">${tag.trim()}</span>`
-                                ).join('') : ''}
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            `;
-            return article;
-        }
-    </script>
+    <script src="./js/instagram-style.js"></script>
 </body>
 </html>
