@@ -803,6 +803,9 @@ body {
 
 /* Mobile Small */
 @media (max-width: 480px) {
+    .instagram-layout {
+        min-height: 100dvh;
+    }
     .hero-container {
         padding: 0 20px;
     }
