@@ -538,7 +538,7 @@ body {
     font-size: 3rem;
     font-weight: 500;
     margin-bottom: 20px;
-    line-height: .9;
+    line-height: 1.1;
 }
 
 .brand-highlight {
@@ -550,6 +550,7 @@ body {
     background-clip: text;
     font-weight: 700;
     font-size: 3.5rem;
+    white-space: nowrap;
 }
 
 .hero-subtitle {
