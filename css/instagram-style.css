@@ -453,6 +453,152 @@ body {
     object-fit: cover;
 }
 
+/* Hover Effects and Transitions */
+.story-item:hover .story-avatar {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+.post-avatar:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+.action-btn:hover svg {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Scrollbar Styling */
+.sidebar::-webkit-scrollbar,
+.right-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track,
+.right-sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.right-sidebar::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover,
+.right-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Index Page Styles */
+.hero {
+    height: 100%;
+    max-height: 100vh;
+    padding: 80px 0 60px;
+    background: #ffffff00;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-container {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.brand-highlight {
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 5.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #0095f6;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0084e0;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #667eea;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #0095f6;
+    border-color: #0095f6;
+}
+
+.btn-outline:hover {
+    background: #0095f6;
+    color: white;
+}
+
 /* Responsive Design */
 @media (max-width: 1264px) {
     .main-content {
@@ -463,7 +609,7 @@ body {
 }
 
 /* Tablet/Medium Screen - Icon Only Navigation */
-@media (max-width: 1024px) {
+@media (max-width: 1124px) {
     .logo-section{display: flex; justify-content: center;}
     .sidebar {
         width: 80px;
@@ -703,172 +849,6 @@ body {
     .hero-container {
         padding: 0 15px;
     }
-}
-
-/* Hover Effects and Transitions */
-.story-item:hover .story-avatar {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
-}
-
-.post-avatar:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
-}
-
-.action-btn:hover svg {
-    transform: scale(1.1);
-    transition: transform 0.2s ease;
-}
-
-/* Scrollbar Styling */
-.sidebar::-webkit-scrollbar,
-.right-sidebar::-webkit-scrollbar {
-    width: 6px;
-}
-
-.sidebar::-webkit-scrollbar-track,
-.right-sidebar::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-.sidebar::-webkit-scrollbar-thumb,
-.right-sidebar::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 3px;
-}
-
-.sidebar::-webkit-scrollbar-thumb:hover,
-.right-sidebar::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
-}
-
-/* Loading Animation */
-@keyframes pulse {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.loading {
-    animation: pulse 1.5s ease-in-out infinite;
-}
-
-/* Index Page Styles */
-.hero {
-    height: 100%;
-    max-height: 100vh;
-    padding: 80px 0 60px;
-    background: #ffffff00;
-    color: white;
-    text-align: center;
-    position: relative;
-}
-
-.hero-container {
-    height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content {
-    text-align: center;
-    max-width: 800px;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.brand-highlight {
-    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 5.5rem;
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
-}
-
-.hero-actions {
-    display: flex;
-    gap: 20px;
-}
-
-.btn {
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background: #0095f6;
-    color: white;
-}
-
-.btn-primary:hover {
-    background: #0084e0;
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: white;
-    border-color: white;
-}
-
-.btn-secondary:hover {
-    background: white;
-    color: #667eea;
-}
-
-.btn-outline {
-    background: transparent;
-    color: #0095f6;
-    border-color: #0095f6;
-}
-
-.btn-outline:hover {
-    background: #0095f6;
-    color: white;
-}
-
-.hero-visual {
-    flex: 1;
-}
-
-.hero-image-container {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-    display: block;
 }
 
 .container {
