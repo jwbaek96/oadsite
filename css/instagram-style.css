@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    word-break: break-all;
 }
 
 body {
@@ -798,19 +799,17 @@ body {
 
 .services {
     padding: 80px 0;
-    background: rgba(255, 255, 255, 0.9);
+    background:linear-gradient(#fff 35%, #edeeffcb 65%, #dfeaffb7 80%, #fff);
     backdrop-filter: blur(10px);
 }
 
 /* Accordion Styles */
 .services-accordion {
-    max-width: 1000px;
     margin: 0 auto;
 }
 
 .accordion-item {
-    margin-bottom: 20px;
-    border-radius: 12px;
+    margin-bottom: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
 }
@@ -823,7 +822,7 @@ body {
     width: 100%;
     background: none;
     border: none;
-    padding: 30px;
+    padding: 30px 30px 15px 30px;
     cursor: pointer;
     transition: all 0.3s ease;
     /* border-bottom: 1px solid rgba(0, 0, 0, 0.118); */
@@ -842,7 +841,8 @@ body {
 }
 
 .accordion-title {
-    font-size: 1.8rem;
+    font-size: 3.7rem;
+    text-transform: uppercase;
     font-weight: 600;
     color: #262626;
     text-align: left;
@@ -869,38 +869,56 @@ body {
 }
 
 .service-description {
-    padding: 20px 30px;
+    /* padding: 3px 7px 10px 7px; */
+    padding: 0px 45px 10px 45px;
     color: #666;
-    font-size: 1.1rem;
+    font-size: .95rem;
     line-height: 1.6;
     margin: 0;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.5s ease 0.1s;
+}
+
+.accordion-item.active .service-description {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Service Items Horizontal Scroll */
 .service-items {
     display: flex;
     gap: 20px;
-    padding: 30px;
+    padding: 3px 7px 10px 7px;
+    margin: 10px 40px;
     overflow-x: auto;
     scroll-behavior: smooth;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease 0.2s;
+}
+
+.accordion-item.active .service-items {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .service-items::-webkit-scrollbar {
-    height: 8px;
+    height:8px;
 }
 
 .service-items::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.434);
     border-radius: 4px;
 }
 
 .service-items::-webkit-scrollbar-thumb {
-    background: #667eea;
+    background: #c6c6c6;
     border-radius: 4px;
 }
 
 .service-items::-webkit-scrollbar-thumb:hover {
-    background: #5a67d8;
+    background: #ababab;
 }
 
 .service-item {
@@ -910,11 +928,43 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateX(-20px);
 }
 
-.service-item:hover {
-    transform: translateY(-5px);
+.accordion-item.active .service-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Staggered animation for service items */
+.accordion-item.active .service-item:nth-child(1) {
+    transition-delay: 0.3s;
+}
+
+.accordion-item.active .service-item:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.accordion-item.active .service-item:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+.accordion-item.active .service-item:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+.accordion-item.active .service-item:nth-child(5) {
+    transition-delay: 0.7s;
+}
+
+.accordion-item.active .service-item:nth-child(6) {
+    transition-delay: 0.8s;
+}
+
+.accordion-item.active .service-item:hover {
+    transform: translateX(0) translateY(-5px);
 }
 
 .service-item img {
@@ -1194,6 +1244,8 @@ body {
     .hero-container {
         padding: 0 40px;
     }
+    .accordion-title {font-size: 2.7rem;}
+    
 }
 
 /* Mobile Large */
@@ -1213,6 +1265,7 @@ body {
     .hero-container {
         padding: 0 30px;
     }
+    .accordion-title {font-size: 1.7rem;}
 }
 
 /* Mobile Small */
@@ -1254,6 +1307,9 @@ body {
     .accordion-header{
         padding: 10px 5px;
     }
+    .accordion-title {font-size: 1.5rem;}
+    .service-description{padding: 3px 7px 10px 7px;}
+    .service-items{margin: 3px 7px 10px 7px;}
 }
 
 /* Extra Small Mobile */
