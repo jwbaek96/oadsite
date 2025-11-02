@@ -62,6 +62,9 @@ class InstagramApp {
         // Mobile menu toggle
         this.setupMobileMenu();
 
+        // Services accordion
+        this.setupServicesAccordion();
+
         // Keyboard navigation
         this.setupKeyboardNavigation();
     }
@@ -456,6 +459,76 @@ class InstagramApp {
         menuOverlay.addEventListener('touchmove', (e) => {
             e.preventDefault();
         }, { passive: false });
+    }
+
+    setupServicesAccordion() {
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionItem = header.closest('.accordion-item');
+                const isCurrentlyActive = accordionItem.classList.contains('active');
+                
+                // Close all accordion items
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // If the clicked item wasn't active, open it
+                if (!isCurrentlyActive) {
+                    accordionItem.classList.add('active');
+                    
+                    // Smooth scroll to show the opened accordion
+                    setTimeout(() => {
+                        accordionItem.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest'
+                        });
+                    }, 300);
+                }
+            });
+        });
+
+        // Setup horizontal scroll for service items
+        this.setupHorizontalScroll();
+    }
+
+    setupHorizontalScroll() {
+        const serviceItemsContainers = document.querySelectorAll('.service-items');
+        
+        serviceItemsContainers.forEach(container => {
+            // Add smooth scrolling behavior
+            let isScrolling = false;
+            
+            container.addEventListener('wheel', (e) => {
+                if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                    e.preventDefault();
+                    container.scrollLeft += e.deltaY;
+                }
+            }, { passive: false });
+
+            // Add touch/drag scrolling for mobile
+            let startX;
+            let scrollStart;
+
+            container.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                scrollStart = container.scrollLeft;
+            });
+
+            container.addEventListener('touchmove', (e) => {
+                if (!startX) return;
+                
+                const currentX = e.touches[0].clientX;
+                const diff = startX - currentX;
+                container.scrollLeft = scrollStart + diff;
+            });
+
+            container.addEventListener('touchend', () => {
+                startX = null;
+                scrollStart = null;
+            });
+        });
     }
 
     setupKeyboardNavigation() {

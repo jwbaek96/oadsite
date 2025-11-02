@@ -66,12 +66,12 @@
                     </svg>
                     010-1234-5678
                 </a>
-                <a href="mailto:contact@oadesign.co.kr" class="mobile-contact-link">
+                <a href="mailto:contact@oad.st" class="mobile-contact-link">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
-                    contact@oadesign.co.kr
+                    contact@oad.st
                 </a>
                 <div class="mobile-social-links">
                     <a href="https://instagram.com/oadesign_studio" target="_blank" class="mobile-social-link">
@@ -87,7 +87,7 @@
                             <polygon points="9.75,15.02 15.5,11.75 9.75,8.48"></polygon>
                         </svg>
                     </a>
-                    <a href="https://oadesign.co.kr" target="_blank" class="mobile-social-link">
+                    <a href="https://oad.st" target="_blank" class="mobile-social-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"></circle>
                             <line x1="2" y1="12" x2="22" y2="12"></line>
@@ -187,7 +187,7 @@
                         </a>
                         
                         <!-- Website -->
-                        <a href="https://oadesign.co.kr" target="_blank" class="nav-link" data-tooltip="웹사이트">
+                        <a href="https://oad.st" target="_blank" class="nav-link" data-tooltip="웹사이트">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <line x1="2" y1="12" x2="22" y2="12"></line>
@@ -213,7 +213,7 @@
                         </a>
                         
                         <!-- Email -->
-                        <a href="mailto:contact@oadesign.co.kr" class="nav-link" data-tooltip="이메일">
+                        <a href="mailto:contact@oad.st" class="nav-link" data-tooltip="이메일">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
@@ -240,81 +240,159 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Featured Posts Section -->
-            <section class="featured-posts" aria-labelledby="featured-title">
-                <div class="container">
-                    <h2 id="featured-title" class="section-title">Featured Posts</h2>
-                    <div class="posts-grid" id="featured-posts-grid">
-                        <!-- Featured posts will be loaded here -->
-                        <div class="loading-skeleton">
-                            <div class="skeleton-card"></div>
-                            <div class="skeleton-card"></div>
-                            <div class="skeleton-card"></div>
-                        </div>
-                    </div>
-                    <div class="section-actions">
-                        <a href="blog.html" class="btn btn-outline">View All Posts</a>
-                    </div>
-                </div>
-            </section>
-
             <!-- Services Section -->
             <section class="services" aria-labelledby="services-title">
                 <div class="container">
-                    <h2 id="services-title" class="section-title">Our Services</h2>
-                    <div class="services-grid">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                                </svg>
-                            </div>
-                            <h3 class="service-title">Web Development</h3>
-                            <p class="service-description">사용자 경험을 중심으로 한 현대적인 웹 솔루션을 개발합니다.</p>
-                        </div>
+                    <div class="services-accordion">
                         
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="6,9 6,2 18,2 18,9"></polyline>
-                                    <path d="M6 18H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2"></path>
-                                    <rect x="6" y="14" width="12" height="8"></rect>
-                                </svg>
+                        <!-- Web Development Accordion -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-service="web">
+                                <div class="accordion-header-content">
+                                    <h2 class="accordion-title">Web Development</h2>
+                                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="service-description">사용자 경험을 중심으로 한 현대적인 웹 솔루션을 개발합니다.</p>
+                                <div class="service-items">
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/667eea/ffffff?text=React" alt="React 개발">
+                                        <h4>React 웹앱</h4>
+                                        <p>모던 프론트엔드 개발</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/48dbfb/ffffff?text=Vue" alt="Vue 개발">
+                                        <h4>Vue.js 개발</h4>
+                                        <p>유연한 사용자 인터페이스</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/ff6b6b/ffffff?text=Node" alt="백엔드 개발">
+                                        <h4>백엔드 시스템</h4>
+                                        <p>안정적인 서버 구축</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/feca57/ffffff?text=Mobile" alt="모바일 웹">
+                                        <h4>반응형 웹</h4>
+                                        <p>모든 디바이스 대응</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="service-title">Print Design</h3>
-                            <p class="service-description">명함, 브로셔, 포스터 등 다양한 인쇄물 디자인을 제공합니다.</p>
                         </div>
-                        
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <polyline points="14,2 14,8 20,8"></polyline>
-                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    <polyline points="10,9 9,9 8,9"></polyline>
-                                </svg>
+
+                        <!-- Print Design Accordion -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-service="print">
+                                <div class="accordion-header-content">
+                                    <h2 class="accordion-title">Print Design</h2>
+                                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="service-description">명함, 브로셔, 포스터 등 다양한 인쇄물 디자인을 제공합니다.</p>
+                                <div class="service-items">
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/ff9ff3/ffffff?text=Card" alt="명함 디자인">
+                                        <h4>명함 디자인</h4>
+                                        <p>전문적인 비즈니스 카드</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/764ba2/ffffff?text=Poster" alt="포스터 디자인">
+                                        <h4>포스터 디자인</h4>
+                                        <p>임팩트 있는 홍보물</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/667eea/ffffff?text=Brochure" alt="브로셔 디자인">
+                                        <h4>브로셔 디자인</h4>
+                                        <p>정보 전달의 완성</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/48dbfb/ffffff?text=Package" alt="패키지 디자인">
+                                        <h4>패키지 디자인</h4>
+                                        <p>제품의 첫인상</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="service-title">PPT Design</h3>
-                            <p class="service-description">효과적인 프레젠테이션을 위한 전문적인 PPT 디자인을 제작합니다.</p>
                         </div>
-                        
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                    <path d="M12 1v6m0 6v6"></path>
-                                    <path d="m21 12-6-3-6 3 6 3z"></path>
-                                    <path d="m21 12-6 3-6-3 6-3z"></path>
-                                    <path d="M3 12l6-3 6 3-6 3z"></path>
-                                </svg>
+
+                        <!-- PPT Design Accordion -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-service="ppt">
+                                <div class="accordion-header-content">
+                                    <h2 class="accordion-title">PPT Design</h2>
+                                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="service-description">효과적인 프레젠테이션을 위한 전문적인 PPT 디자인을 제작합니다.</p>
+                                <div class="service-items">
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/ff6b6b/ffffff?text=Business" alt="비즈니스 PPT">
+                                        <h4>비즈니스 PPT</h4>
+                                        <p>전문적인 기업 발표</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/feca57/ffffff?text=Pitch" alt="피치덱">
+                                        <h4>피치덱 디자인</h4>
+                                        <p>투자유치용 프레젠테이션</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/ff9ff3/ffffff?text=Template" alt="템플릿">
+                                        <h4>PPT 템플릿</h4>
+                                        <p>재사용 가능한 디자인</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/764ba2/ffffff?text=Infographic" alt="인포그래픽">
+                                        <h4>인포그래픽</h4>
+                                        <p>데이터 시각화</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="service-title">AI Content</h3>
-                            <p class="service-description">AI 기술을 활용한 창의적인 컨텐츠 제작 및 디자인 솔루션을 제공합니다.</p>
                         </div>
+
+                        <!-- AI Content Accordion -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-service="ai">
+                                <div class="accordion-header-content">
+                                    <h2 class="accordion-title">AI Content</h2>
+                                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6,9 12,15 18,9"></polyline>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="service-description">AI 기술을 활용한 창의적인 컨텐츠 제작 및 디자인 솔루션을 제공합니다.</p>
+                                <div class="service-items">
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/667eea/ffffff?text=AI+Art" alt="AI 아트">
+                                        <h4>AI 아트 생성</h4>
+                                        <p>창의적인 이미지 제작</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/48dbfb/ffffff?text=Content" alt="콘텐츠 생성">
+                                        <h4>콘텐츠 생성</h4>
+                                        <p>자동화된 텍스트 작성</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/ff6b6b/ffffff?text=Logo" alt="로고 생성">
+                                        <h4>AI 로고 디자인</h4>
+                                        <p>브랜드 아이덴티티 생성</p>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="https://via.placeholder.com/200x150/feca57/ffffff?text=Video" alt="비디오 생성">
+                                        <h4>AI 비디오</h4>
+                                        <p>자동 영상 편집</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
