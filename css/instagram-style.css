@@ -29,7 +29,7 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: contrast(1.2) brightness(120%);
+    filter: contrast(1.1) brightness(110%) saturate(1.5);
 }
 
 /* Background Overlay */
@@ -970,7 +970,7 @@ body {
 .about-description {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #666;
+    color: #242424;
     margin-bottom: 20px;
 }
 
@@ -1157,6 +1157,17 @@ body {
     }
 }
 
+@media (max-width: 680px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-stats {
+        justify-content: center;
+        gap: 20px;
+    }
+}
 /* Large Desktop */
 @media (min-width: 1400px) {
     .hero-title {
@@ -1250,16 +1261,6 @@ body {
     .hero-subtitle {
         font-size: 0.9rem;
         margin-bottom: 25px;
-    }
-    
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .about-stats {
-        justify-content: center;
-        gap: 20px;
     }
     .accordion-header{
         padding: 10px 5px;
