@@ -5,6 +5,10 @@
     box-sizing: border-box;
     word-break: break-all;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -125,7 +129,7 @@ body {
 }
 
 .nav-link:hover {
-    font-weight: 600;
+    /* font-weight: 600; */
     background-color: #f2f2f2;
     color: #262626;
 }
@@ -172,9 +176,12 @@ body {
 }
 
 .contact-links .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    /* transform: translateX(4px); */
+    transform: none;
+    background-color: rgba(0, 0, 0, 0.359);
+    color: #ffffffdd;
 }
+    
+
 
 /* Main Content */
 .main-content {
@@ -663,7 +670,7 @@ body {
 /* Index Page Styles */
 .hero {
     height: 100%;
-    max-height: 100vh;
+    max-height: 100dvh;
     padding: 80px 0 60px;
     background: #ffffff00;
     color: white;
@@ -799,7 +806,7 @@ body {
 
 .services {
     padding: 80px 0;
-    background:linear-gradient(#fff 35%, #edeeffcb 65%, #dfeaffb7 80%, #fff);
+    background:linear-gradient(#fff 35%, #edeeffcb 65%, #dfeaffb7 80%, #dfeaffb7);
     backdrop-filter: blur(10px);
 }
 
@@ -989,7 +996,7 @@ body {
 
 .about {
     padding: 80px 0;
-    background: #fafafa;
+    background: #ffffff;
 }
 
 .about-content {
@@ -1108,11 +1115,6 @@ body {
     
     .more-section .nav-text {
         display: none;
-    }
-    
-    .contact-links .nav-link:hover {
-        transform: none;
-        background-color: rgba(255, 255, 255, 0.1);
     }
     
     /* Tooltip effect for icon-only navigation */
@@ -1250,6 +1252,7 @@ body {
 
 /* Mobile Large */
 @media (max-width: 768px) and (min-width: 481px) {
+    .nav-link{font-size: 12px;}
     .hero-title {
         font-size: 2.5rem;
     }
