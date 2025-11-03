@@ -680,6 +680,7 @@ body {
 
 .hero-container {
     height: 100%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 50px;
@@ -690,6 +691,7 @@ body {
 
 .hero-content {
     text-align: left;
+    width: 100%;
     max-width: 800px;
 }
 
@@ -704,11 +706,13 @@ body {
     white-space: nowrap;
     font-family: "Inter", "Noto Sans KR", sans-serif;
     background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+    /* text-shadow: 0 0 5px linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3); */
+    text-shadow: 0px 0px 18px #ff6b6b, 0px 2px 0px #feca57, 0px 6px 5px #48dbfb, 0px 11px 4px #ff9ff3;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 700;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     white-space: nowrap;
 }
 
@@ -1159,7 +1163,8 @@ body {
         width: 100%;
         max-width: none;
         padding: 0;
-        padding-top: 60px; /* Space for mobile header */
+        /* padding-top: 60px;  */
+        /* Space for mobile header */
     }
     
     .hero {
@@ -1206,7 +1211,7 @@ body {
     }
     
     .brand-highlight {
-        font-size: 3.5rem;
+        font-size: 4.5rem;
     }
     
     .hero-subtitle {
