@@ -1610,6 +1610,11 @@ body {
         font-size: 1.2rem;
     }
     
+    .footer-section:last-child .footer-contact{
+        text-align: center;
+        align-items: center;
+    }
+    
     .footer-description {
         font-size: 0.85rem;
     }
