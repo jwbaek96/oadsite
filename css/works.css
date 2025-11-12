@@ -12,7 +12,7 @@
 }
 
 .category-container {
-    padding:0 44px 5px;
+    padding:5px 44px 5px;
     display: flex;
     gap: 12px;
     -ms-overflow-style: none;
@@ -202,7 +202,7 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
     .category-container {
-        padding: 0 20px 5px;
+        padding: 5px 20px 5px;
         gap: 10px;
     }
 
@@ -249,7 +249,7 @@
 /* Small Mobile */
 @media (max-width: 480px) {
     .category-container {
-        padding: 0 10px 5px;
+        padding: 5px 10px 5px;
     }
     .category-btn {
         padding: 7px 16px;
