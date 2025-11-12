@@ -1,0 +1,351 @@
+/* Story Page Styles */
+
+/* Story Content */
+.story-content {
+    padding: 40px 40px 80px;
+    align-items: flex-start;
+}
+
+.story-container {
+    /* max-width: 900px; */
+    margin: 0 auto;
+}
+
+/* Story Item */
+.story-item {
+    margin-bottom: 80px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.story-item:nth-child(1) { animation-delay: 0.1s; }
+.story-item:nth-child(2) { animation-delay: 0.2s; }
+.story-item:nth-child(3) { animation-delay: 0.3s; }
+.story-item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.story-icon {
+    font-size: 3rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.story-text {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.story-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.story-paragraph {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 20px;
+}
+
+.story-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+.story-paragraph strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Philosophy Grid */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.philosophy-card {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.philosophy-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.philosophy-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Services Table */
+.services-table {
+    margin-top: 32px;
+}
+
+.service-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-row:last-child {
+    border-bottom: none;
+}
+
+.service-name h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge-main {
+    display: inline-block;
+    padding: 4px 12px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.service-value p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* CTA Box */
+.cta-box {
+    margin-top: 32px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+.cta-question,
+.cta-answer,
+.cta-closing {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+.cta-question strong,
+.cta-answer strong {
+    color: #ffffff;
+    font-weight: 700;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 16px 48px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .story-content {
+        padding: 30px 30px 60px;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-row {
+        grid-template-columns: 220px 1fr;
+        gap: 20px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .story-content {
+        padding: 20px 20px 40px;
+    }
+
+    .story-item {
+        margin-bottom: 60px;
+    }
+
+    .story-icon {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .story-text {
+        padding: 28px 24px;
+    }
+
+    .story-heading {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .story-paragraph {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    .philosophy-card {
+        padding: 24px;
+    }
+
+    .philosophy-title {
+        font-size: 1.1rem;
+    }
+
+    .philosophy-description {
+        font-size: 0.9rem;
+    }
+
+    .service-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 20px 0;
+    }
+
+    .service-name h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-value p {
+        font-size: 0.9rem;
+    }
+
+    .cta-box {
+        padding: 28px 20px;
+    }
+
+    .cta-question,
+    .cta-answer,
+    .cta-closing {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 14px 36px;
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .story-content {
+        padding: 15px 15px 30px;
+    }
+
+    .story-item {
+        margin-bottom: 50px;
+    }
+
+    .story-icon {
+        font-size: 2rem;
+    }
+
+    .story-text {
+        padding: 24px 20px;
+    }
+
+    .story-heading {
+        font-size: 1.3rem;
+    }
+
+    .story-paragraph {
+        font-size: 0.95rem;
+    }
+
+    .philosophy-card {
+        padding: 20px;
+    }
+
+    .service-name h3 {
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .cta-box {
+        padding: 24px 16px;
+    }
+
+    .cta-question,
+    .cta-answer,
+    .cta-closing {
+        font-size: 0.95rem;
+    }
+
+    .cta-button {
+        padding: 12px 32px;
+        font-size: 0.95rem;
+    }
+}

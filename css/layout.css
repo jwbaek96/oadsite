@@ -1,0 +1,74 @@
+/* Layout Common Styles */
+
+/* Page Header */
+.page-header {
+    padding: 80px 40px 0px;
+}
+
+.page-header-content {
+    /* max-width: 800px; */
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 6.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+    font-family: "Inter", "Noto Sans KR", sans-serif;
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+    text-shadow: 0px 0px 18px #ff6b6b, 0px 2px 0px #feca57, 0px 6px 5px #48dbfb, 0px 11px 4px #ff9ff3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .page-header {
+        padding: 30px;
+    }
+
+    .page-title {
+        font-size: 6.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 30px 20px 30px;
+    }
+
+    .page-title {
+        font-size: 4rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .page-header {
+        padding: 30px 15px 20px;
+    }
+
+    .page-title {
+        font-size: 5.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 0.95rem;
+    }
+}

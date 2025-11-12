@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Works - OA Design Studio</title>
-    <meta name="description" content="OA Design Studio의 포트폴리오와 작업물을 확인하세요">
+    <title>Story - OA Design Studio</title>
+    <meta name="description" content="OA Design Studio의 이야기와 여정을 만나보세요">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/works.css">
+    <link rel="stylesheet" href="css/story.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- fonts -->
@@ -18,7 +18,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/0470599ade.js" crossorigin="anonymous"></script>
 </head>
-<body data-no-auto-footer="true">
+<body data-no-auto-footer="true" data-page="story">
     <!-- Background Video -->
     <video autoplay muted loop class="background-video">
         <source src="assets/bg.mp4" type="video/mp4">
@@ -89,7 +89,7 @@
             <ul class="mobile-menu-list">
                 <li><a href="index.html" class="mobile-menu-link" data-page="home">HOME</a></li>
                 <li><a href="about.html" class="mobile-menu-link" data-page="about">ABOUT</a></li>
-                <li><a href="works.html" class="mobile-menu-link active" data-page="works">WORKS</a></li>
+                <li><a href="works.html" class="mobile-menu-link" data-page="works">WORKS</a></li>
                 <li><a href="story.html" class="mobile-menu-link" data-page="story">STORY</a></li>
                 <li><a href="contact.html" class="mobile-menu-link" data-page="contact">CONTACT</a></li>
                 <li><a href="notice.html" class="mobile-menu-link" data-page="notice">NOTICE</a></li>
@@ -130,7 +130,7 @@
                                 <span class="nav-text">ABOUT</span>
                             </a>
                         </li>
-                        <li class="nav-item active" data-page="works">
+                        <li class="nav-item" data-page="works">
                             <a href="works.html" class="nav-link" data-tooltip="WORKS">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -215,212 +215,152 @@
             </div>
         </aside>
 
-        <!-- Main Content Area - WORKS PAGE CONTENT -->
+        <!-- Main Content Area -->
         <main class="main-content">
-            <!-- Works Header -->
+            <!-- Story Header -->
             <section class="page-header">
                 <div class="page-header-content">
-                    <h1 class="page-title">Works</h1>
-                    <!-- <p class="page-subtitle">다양한 프로젝트와 작업물을 만나보세요</p> -->
+                    <h1 class="page-title">Our Story</h1>
+                    <!-- <p class="page-subtitle">OA Design Studio의 여정과 이야기</p> -->
                 </div>
             </section>
 
-            <!-- Category Filter -->
-            <section class="works-categories">
-                <div class="category-container">
-                    <button class="category-btn active" data-category="all">전체</button>
-                    <button class="category-btn" data-category="web">웹 개발</button>
-                    <button class="category-btn" data-category="print">인쇄물</button>
-                    <button class="category-btn" data-category="ppt">PPT 디자인</button>
-                    <button class="category-btn" data-category="ai">AI 콘텐츠</button>
-                    <button class="category-btn" data-category="branding">브랜딩</button>
+            <!-- Story Content -->
+            <section class="story-content">
+                <div class="story-container">
+                    
+                    <!-- Story Item 1: 시작 -->
+                    <article class="story-item">
+                        <div class="story-text">
+                            <h2 class="story-heading">OAD의 시작: 왜 디자인에 'Original Answer'가 필요한가요?</h2>
+                            <p class="story-paragraph">
+                                OAD는 <strong>Original Answer Design Studio</strong>의 약자입니다. 
+                                'OA'는 단순한 약자를 넘어, 'Original Answer', 즉 
+                                <strong>'가장 근본적이고 독창적인 해답'</strong>을 의미합니다.
+                            </p>
+                            <p class="story-paragraph">
+                                오늘날, 수많은 기업과 브랜드가 디지털 세계에서 목소리를 내고 있습니다. 
+                                하지만 그 목소리들이 복잡한 세상 속에서 길을 잃지 않으려면, 
+                                가장 본질적인 질문에 대한 가장 명확한 답을 디자인에 담아내야 합니다.
+                            </p>
+                            <p class="story-paragraph">
+                                OAD는 바로 이 지점에서 시작합니다. 우리는 단순히 '보기 좋은' 결과물을 만드는 것을 넘어, 
+                                클라이언트의 고민과 목표에 대한 가장 효과적이고 독창적인 해답을 디자인으로 제시합니다.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Story Item 2: 핵심 철학 -->
+                    <article class="story-item">
+                        <div class="story-text">
+                            <h2 class="story-heading">OAD의 핵심 철학: 본질에서 시작하여 해답을 완성하다</h2>
+                            <p class="story-paragraph">
+                                우리의 작업은 언제나 다음의 세 가지 핵심 가치에서 출발합니다.
+                            </p>
+                            <div class="philosophy-grid">
+                                <div class="philosophy-card">
+                                    <h3 class="philosophy-title">1. Originality (독창성)</h3>
+                                    <p class="philosophy-description">
+                                        복제된 솔루션 대신, 클라이언트 고유의 가치를 증폭시키는 유일무이한 디자인을 추구합니다.
+                                    </p>
+                                </div>
+                                <div class="philosophy-card">
+                                    <h3 class="philosophy-title">2. Answer (해답)</h3>
+                                    <p class="philosophy-description">
+                                        복잡성을 제거하고, 클라이언트가 원하는 비즈니스 목표를 달성할 수 있는 
+                                        명확하고 기능적인 디자인 해법을 제공합니다.
+                                    </p>
+                                </div>
+                                <div class="philosophy-card">
+                                    <h3 class="philosophy-title">3. Design (설계)</h3>
+                                    <p class="philosophy-description">
+                                        심미성뿐만 아니라, 사용자 경험(UX)과 기술적 완성도를 고려한 
+                                        치밀한 설계로 결과물의 가치를 극대화합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Story Item 3: Original Answer -->
+                    <article class="story-item">
+                        <div class="story-text">
+                            <h2 class="story-heading">OAD가 만드는 'Original Answer'</h2>
+                            <p class="story-paragraph">
+                                OAD는 웹사이트 제작을 메인으로 하며, 클라이언트의 아이덴티티를 디지털 공간에서 완벽하게 구현합니다. 
+                                나아가, 모든 접점에서 일관된 브랜드 경험을 제공하기 위해 다음과 같은 영역에서 'Original Answer'를 만듭니다.
+                            </p>
+                            
+                            <div class="services-table">
+                                <div class="service-row">
+                                    <div class="service-name">
+                                        <h3>웹사이트 제작 <span class="badge-main">메인</span></h3>
+                                    </div>
+                                    <div class="service-value">
+                                        <p>브랜드 아이덴티티와 사용자 경험(UX)을 통합한, 비즈니스 성장에 최적화된 맞춤형 디지털 플랫폼 구축.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-row">
+                                    <div class="service-name">
+                                        <h3>프린트 디자인</h3>
+                                    </div>
+                                    <div class="service-value">
+                                        <p>브로슈어, 명함, 패키지 등 오프라인 접점에서 브랜드의 품격을 높이는 세련되고 일관된 디자인.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-row">
+                                    <div class="service-name">
+                                        <h3>PPT 디자인</h3>
+                                    </div>
+                                    <div class="service-value">
+                                        <p>투자 유치, 내부 보고, 발표 등 목적에 맞는 메시지 전달력을 극대화하는 논리적이고 시각적인 프레젠테이션 디자인.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-row">
+                                    <div class="service-name">
+                                        <h3>AI 콘텐츠 제작</h3>
+                                    </div>
+                                    <div class="service-value">
+                                        <p>최신 AI 기술을 활용하여 텍스트, 이미지, 영상 등 효율적이고 독창적인 콘텐츠를 제작, 디지털 마케팅의 새로운 가능성을 열어드립니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Story Item 4: 미래 -->
+                    <article class="story-item">
+                        <div class="story-text">
+                            <h2 class="story-heading">OAD와 함께 만들어 갈 미래</h2>
+                            <p class="story-paragraph">
+                                OAD는 클라이언트를 단순히 프로젝트의 의뢰자로 보지 않습니다. 
+                                우리는 함께 Original Answer를 찾아나가는 파트너입니다.
+                            </p>
+                            <div class="cta-box">
+                                <p class="cta-question">
+                                    당신의 비즈니스가 세상에 던지고 싶은 <strong>'가장 중요한 질문'</strong>은 무엇인가요?
+                                </p>
+                                <p class="cta-answer">
+                                    OAD는 그 질문에 가장 <strong>'독창적이고 명확한 해답'</strong>을 디자인으로 제시할 준비가 되어 있습니다.
+                                </p>
+                                <p class="cta-closing">
+                                    당신의 브랜드 스토리를 Original Answer Design Studio와 함께 완성하세요.
+                                </p>
+                                <a href="contact.html" class="cta-button">프로젝트 시작하기</a>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
             </section>
-
-            <!-- Works Grid -->
-            <section class="works-grid-section">
-                <div class="works-container">
-                    <div class="works-grid">
-                        
-                        <!-- Work Item 1 -->
-                        <article class="work-card" data-category="web">
-                            <a href="#" class="work-card-link">
-                                <div class="work-card-image">
-                                    <img src="assets/ypp.jpeg" alt="와이피피 웹사이트">
-                                    <div class="work-card-overlay">
-                                        <!-- <span class="work-view-more">자세히 보기</span> -->
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <!-- <span class="work-category-tag">웹 개발</span> -->
-                                    <h3 class="work-title">(주)와이피피 기업 웹사이트</h3>
-                                    <p class="work-description">에너지 기업을 위한 모던한 기업 웹사이트 구축</p>
-                                    <div class="work-meta">
-                                        <span class="work-date">2024</span>
-                                        <span class="work-client">YPP</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                        <!-- Work Item 2 -->
-                        <article class="work-card" data-category="web">
-                            <a href="#" class="work-card-link">
-                                <div class="work-card-image">
-                                    <img src="assets/ini.jpeg" alt="인사이트넥서스연구원">
-                                    <div class="work-card-overlay">
-                                        <!-- <span class="work-view-more">자세히 보기</span> -->
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <!-- <span class="work-category-tag">웹 개발</span> -->
-                                    <h3 class="work-title">인사이트넥서스연구원</h3>
-                                    <p class="work-description">교육 기업을 위한 전문적인 웹 플랫폼 개발</p>
-                                    <div class="work-meta">
-                                        <span class="work-date">2024</span>
-                                        <span class="work-client">INI</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                        <!-- Work Item 3 -->
-                        <article class="work-card" data-category="web">
-                            <a href="https://jwbaek.kr" target="_blank" class="work-card-link">
-                                <div class="work-card-image">
-                                    <img src="assets/jwbaek.jpeg" alt="개인 포트폴리오">
-                                    <div class="work-card-overlay">
-                                        <!-- <span class="work-view-more">자세히 보기</span> -->
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <!-- <span class="work-category-tag">웹 개발</span> -->
-                                    <h3 class="work-title">jwbaek.kr - 개인 포트폴리오</h3>
-                                    <p class="work-description">미니멀한 디자인의 개인 포트폴리오 & 블로그</p>
-                                    <div class="work-meta">
-                                        <span class="work-date">2024</span>
-                                        <span class="work-client">Personal</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                        <!-- Work Item 4 -->
-                        <article class="work-card" data-category="print">
-                            <a href="#" class="work-card-link">
-                                <div class="work-card-image">
-                                    <img src="https://via.placeholder.com/400x300/ff9ff3/ffffff?text=Business+Card" alt="명함 디자인">
-                                    <div class="work-card-overlay">
-                                        <!-- <span class="work-view-more">자세히 보기</span> -->
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <!-- <span class="work-category-tag">인쇄물</span> -->
-                                    <h3 class="work-title">프리미엄 명함 디자인</h3>
-                                    <p class="work-description">고급스러운 브랜드 아이덴티티를 담은 명함</p>
-                                    <div class="work-meta">
-                                        <span class="work-date">2024</span>
-                                        <span class="work-client">Various</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                        <!-- Work Item 5 -->
-                        <article class="work-card" data-category="ppt">
-                            <a href="#" class="work-card-link">
-                                <div class="work-card-image">
-                                    <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Business+PPT" alt="비즈니스 PPT">
-                                    <div class="work-card-overlay">
-                                        <!-- <span class="work-view-more">자세히 보기</span> -->
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <!-- <span class="work-category-tag">PPT 디자인</span> -->
-                                    <h3 class="work-title">기업 IR 프레젠테이션</h3>
-                                    <p class="work-description">투자 유치를 위한 전문적인 피치덱</p>
-                                    <div class="work-meta">
-                                        <span class="work-date">2024</span>
-                                        <span class="work-client">Startup</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                        <!-- Work Item 6 -->
-                        <article class="work-card" data-category="ai">
-                            <a href="#" class="work-card-link">
-                                <div class="work-card-image">
-                                    <img src="https://via.placeholder.com/400x300/48dbfb/ffffff?text=AI+Content" alt="AI 콘텐츠">
-                                    <div class="work-card-overlay">
-                                        <!-- <span class="work-view-more">자세히 보기</span> -->
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <!-- <span class="work-category-tag">AI 콘텐츠</span> -->
-                                    <h3 class="work-title">AI 생성 브랜드 이미지</h3>
-                                    <p class="work-description">인공지능을 활용한 창의적인 비주얼 콘텐츠</p>
-                                    <div class="work-meta">
-                                        <span class="work-date">2024</span>
-                                        <span class="work-client">Brand X</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                        <!-- Work Item 7 -->
-                        <article class="work-card" data-category="branding">
-                            <a href="#" class="work-card-link">
-                                <div class="work-card-image">
-                                    <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Branding" alt="브랜딩">
-                                    <div class="work-card-overlay">
-                                        <!-- <span class="work-view-more">자세히 보기</span> -->
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <!-- <span class="work-category-tag">브랜딩</span> -->
-                                    <h3 class="work-title">카페 브랜드 아이덴티티</h3>
-                                    <p class="work-description">로고부터 패키징까지 통합 브랜드 디자인</p>
-                                    <div class="work-meta">
-                                        <span class="work-date">2024</span>
-                                        <span class="work-client">Cafe</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                        <!-- Work Item 8 -->
-                        <article class="work-card" data-category="print">
-                            <a href="#" class="work-card-link">
-                                <div class="work-card-image">
-                                    <img src="https://via.placeholder.com/400x300/ff6b6b/ffffff?text=Poster" alt="포스터">
-                                    <div class="work-card-overlay">
-                                        <!-- <span class="work-view-more">자세히 보기</span> -->
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <!-- <span class="work-category-tag">인쇄물</span> -->
-                                    <h3 class="work-title">이벤트 포스터 시리즈</h3>
-                                    <p class="work-description">임팩트 있는 비주얼의 홍보 포스터</p>
-                                    <div class="work-meta">
-                                        <span class="work-date">2024</span>
-                                        <span class="work-client">Event</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- Footer Container (will be loaded dynamically) -->
-            <div id="footer-container"></div>
+            
         </main>
     </div>
 
     <!-- Scripts -->
     <script src="js/instagram-style.js"></script>
-    <script src="js/works.js"></script>
 </body>
 </html>
