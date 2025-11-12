@@ -118,8 +118,8 @@ function getCurrentPage() {
         'about': 'about',
         'works': 'works',
         'story': 'story',
-        'contact': 'contact',
-        'notice': 'notice'
+        'contact': 'contact'
+        // 'notice': 'notice'
     };
     
     return pageMap[page] || 'home';
