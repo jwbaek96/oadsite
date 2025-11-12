@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - OA Design Studio</title>
+    <meta name="description" content="OA Design Studio에 프로젝트 문의를 남겨주세요. 24시간 이내 답변드립니다.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/0470599ade.js" crossorigin="anonymous"></script>
+</head>
+<body data-no-auto-footer="true" data-page="contact">
+    <!-- Background Video -->
+    <!-- <video autoplay muted loop class="background-video">
+        <source src="assets/bg.mp4" type="video/mp4">
+    </video> -->
+    
+    <!-- Background Overlay -->
+    <div class="background-overlay"></div>
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="mobile-header-content">
+            <a href="index.html" class="mobile-logo">
+                <img src="assets/Logo.png" alt="OA Design Studio" width="65" height="auto">
+            </a>
+            <button class="mobile-menu-toggle" aria-label="메뉴 열기">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="index.html" class="mobile-menu-logo">
+                    <img src="assets/Logo.png" alt="OA Design Studio" width="55" height="auto">
+                </a>
+                <button class="mobile-menu-close" aria-label="메뉴 닫기">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu-contacts">
+                <div class="mobile-social-links">
+                    <a href="https://instagram.com/oad.st" target="_blank" class="mobile-social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://jwbaek.kr" target="_blank" class="mobile-social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <a href="tel:+82-10-1234-5678" class="mobile-contact-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    010-1234-5678
+                </a>
+                <a href="mailto:contact@oad.st" class="mobile-contact-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    contact@oad.st
+                </a>
+            </div>
+            <ul class="mobile-menu-list">
+                <li><a href="index.html" class="mobile-menu-link" data-page="home">HOME</a></li>
+                <li><a href="about.html" class="mobile-menu-link" data-page="about">ABOUT</a></li>
+                <li><a href="works.html" class="mobile-menu-link" data-page="works">WORKS</a></li>
+                <li><a href="story.html" class="mobile-menu-link" data-page="story">STORY</a></li>
+                <li><a href="contact.html" class="mobile-menu-link" data-page="contact">CONTACT</a></li>
+                <li><a href="notice.html" class="mobile-menu-link" data-page="notice">NOTICE</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Desktop Layout -->
+    <div class="instagram-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <!-- Logo -->
+                <div class="logo-section">
+                    <a href="index.html" class="logo" aria-label="OA Design Studio 홈페이지">
+                        <img src="assets/Logo.png" alt="OA Design Studio Logo" width="120" height="40">
+                    </a>
+                </div>
+
+                <!-- Main Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item" data-page="home">
+                            <a href="index.html" class="nav-link" data-tooltip="HOME">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                                </svg>
+                                <span class="nav-text">HOME</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-page="about">
+                            <a href="about.html" class="nav-link" data-tooltip="ABOUT">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <span class="nav-text">ABOUT</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-page="works">
+                            <a href="works.html" class="nav-link" data-tooltip="WORKS">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                                <span class="nav-text">WORKS</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-page="story">
+                            <a href="story.html" class="nav-link" data-tooltip="STORY">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <circle cx="9" cy="9" r="2"></circle>
+                                    <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+                                </svg>
+                                <span class="nav-text">STORY</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-page="contact">
+                            <a href="contact.html" class="nav-link" data-tooltip="CONTACT">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                <span class="nav-text">CONTACT</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-page="notice">
+                            <a href="notice.html" class="nav-link" data-tooltip="NOTICE">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                </svg>
+                                <span class="nav-text">NOTICE</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- More Options -->
+                <div class="more-section">
+                    <div class="contact-links">
+                        
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/oad.st" target="_blank" class="nav-link" data-tooltip="인스타그램">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            <span class="nav-text">Instagram</span>
+                        </a>
+                        
+                        <!-- Website -->
+                        <a href="https://jwbaek.kr" target="_blank" class="nav-link" data-tooltip="웹사이트">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            <span class="nav-text">jwbaek.kr</span>
+                        </a>
+                        
+                        <!-- Phone -->
+                        <a href="tel:+82-10-1234-5678" class="nav-link" data-tooltip="전화">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="nav-text">+82-10-1234-5678</span>
+                        </a>
+                        
+                        <!-- Email -->
+                        <a href="mailto:contact@oad.st" class="nav-link" data-tooltip="이메일">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span class="nav-text">contact@oad.st</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Contact Header -->
+            <section class="page-header">
+                <div class="page-header-content">
+                    <h1 class="page-title">Contact Us</h1>
+                    <p class="page-subtitle">프로젝트를 시작할 준비가 되셨나요?</p>
+                </div>
+            </section>
+
+            <!-- Contact Content -->
+            <section class="contact-content">
+                <div class="contact-container">
+                    
+                    <!-- Contact Intro -->
+                    <article class="contact-intro">
+                        <p class="intro-text">
+                            OAD는 고객의 문의에 <strong>24시간 이내</strong>로 응답하며, 
+                            프로젝트에 대한 <strong>무료 상담</strong>을 제공합니다.
+                        </p>
+                        <p class="intro-text">
+                            아래 방법 중 편하신 방식으로 연락주시면 최선을 다해 도와드리겠습니다.
+                        </p>
+                    </article>
+
+                    <!-- Contact Methods -->
+                    <article class="contact-methods">
+                        <h2 class="section-heading">연락 방법</h2>
+                        <div class="methods-grid">
+                            <a href="mailto:contact@oad.st" class="method-card">
+                                <div class="method-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="method-title">Email</h3>
+                                <p class="method-value">contact@oad.st</p>
+                                <p class="method-description">가장 확실한 연락 방법</p>
+                            </a>
+
+                            <a href="tel:+82-10-1234-5678" class="method-card">
+                                <div class="method-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="method-title">Phone</h3>
+                                <p class="method-value">010-1234-5678</p>
+                                <p class="method-description">긴급한 상담이 필요하신가요?</p>
+                            </a>
+
+                            <a href="https://open.kakao.com/o/your-link" target="_blank" class="method-card">
+                                <div class="method-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="method-title">KakaoTalk</h3>
+                                <p class="method-value">오픈채팅</p>
+                                <p class="method-description">편하게 대화로 시작하세요</p>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Quick Contact Form -->
+                    <article class="contact-form-section">
+                        <h2 class="section-heading">빠른 문의</h2>
+                        <p class="section-intro">
+                            간단한 정보를 남겨주시면 빠르게 연락드리겠습니다.
+                        </p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">이름 <span class="required">*</span></label>
+                                    <input type="text" id="name" name="name" class="form-input" placeholder="홍길동" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">이메일 <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="example@email.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="projectType" class="form-label">프로젝트 타입</label>
+                                <select id="projectType" name="projectType" class="form-select">
+                                    <option value="">선택해주세요</option>
+                                    <option value="website">웹사이트 제작</option>
+                                    <option value="print">인쇄물 디자인</option>
+                                    <option value="ppt">PPT/IR 디자인</option>
+                                    <option value="ai">AI 콘텐츠 제작</option>
+                                    <option value="branding">브랜딩/아이덴티티</option>
+                                    <option value="other">기타</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">메시지</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="프로젝트에 대해 간단히 설명해주세요."></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-button">
+                                문의 보내기
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                    </article>
+
+                    <!-- Business Info -->
+                    <article class="business-info">
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <h3 class="info-title">영업 시간</h3>
+                                <p class="info-value">월-금 09:00 - 18:00</p>
+                                <p class="info-note">주말 및 공휴일 휴무</p>
+                            </div>
+                            <div class="info-card">
+                                <h3 class="info-title">응답 시간</h3>
+                                <p class="info-value">평균 24시간 이내</p>
+                                <p class="info-note">영업일 기준</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- FAQ Section -->
+                    <article class="contact-faq">
+                        <h2 class="section-heading">자주 묻는 질문</h2>
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <h3 class="faq-question">Q. 프로젝트 소요 기간은 얼마나 되나요?</h3>
+                                <p class="faq-answer">
+                                    프로젝트 규모와 복잡도에 따라 다르지만, 웹사이트의 경우 평균 4-8주, 
+                                    인쇄물/PPT는 1-2주 정도 소요됩니다. 정확한 일정은 상담 후 안내드립니다.
+                                </p>
+                            </div>
+                            <div class="faq-item">
+                                <h3 class="faq-question">Q. 비용은 어떻게 되나요?</h3>
+                                <p class="faq-answer">
+                                    프로젝트의 범위, 기능, 디자인 복잡도에 따라 견적이 달라집니다. 
+                                    무료 상담을 통해 요구사항을 파악한 후 투명한 견적을 제공해드립니다.
+                                </p>
+                            </div>
+                            <div class="faq-item">
+                                <h3 class="faq-question">Q. 프로젝트는 어떻게 진행되나요?</h3>
+                                <p class="faq-answer">
+                                    분석 → 개념화 → 설계 → 검토 → 런칭의 5단계로 진행되며, 
+                                    각 단계마다 클라이언트와 긴밀히 소통하며 피드백을 반영합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+            
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/instagram-style.js"></script>
+</body>
+</html>
