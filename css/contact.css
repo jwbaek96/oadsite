@@ -226,7 +226,7 @@
 .submit-button {
     width: 100%;
     padding: 1.2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #011570 0%, #7e00ff 100%);
     border: none;
     border-radius: 10px;
     color: #fff;
@@ -511,6 +511,9 @@
 
 /* Small Mobile */
 @media (max-width: 480px) {
+    .page-title {
+        font-size: 3.5rem;
+    }
     .contact-intro {
         padding: 1.25rem;
     }
