@@ -131,8 +131,19 @@ class InstagramApp {
     }
 
     handleNavigation(e) {
-        e.preventDefault();
         const link = e.currentTarget;
+        const href = link.getAttribute('href');
+        
+        // If it's a real link (not # or empty), allow default navigation
+        if (href && href !== '#' && !href.startsWith('javascript:')) {
+            // Just show loading state, let the browser navigate normally
+            this.showLoadingState();
+            return; // Allow default navigation
+        }
+        
+        // For anchor links or empty hrefs, prevent default
+        e.preventDefault();
+        
         const isActive = link.closest('.nav-item')?.classList.contains('active') || 
                         link.classList.contains('active');
         
