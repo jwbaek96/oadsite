@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OA Design Studio - 오에이디자인스튜디오</title>
     <meta name="description" content="창의적인 디자인으로 브랜드 스토리를 만들어갑니다">
-    <link rel="stylesheet" href="css/instagram-style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- fonts -->
@@ -16,11 +16,10 @@
     <!-- Font Awesome -->
      <script src="https://kit.fontawesome.com/0470599ade.js" crossorigin="anonymous"></script>
 </head>
-<body data-no-auto-footer="true">
+<body data-no-auto-footer="true" data-page="home">
     <!-- Background Video -->
     <video autoplay muted loop class="background-video">
         <source src="assets/bg.mp4" type="video/mp4">
-        <!-- Fallback for browsers that don't support video -->
     </video>
     
     <!-- Background Overlay -->
@@ -63,12 +62,6 @@
                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                         </svg>
                     </a>
-                    <!-- <a href="https://youtube.com/@oadesign" target="_blank" class="mobile-social-link">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                            <polygon points="9.75,15.02 15.5,11.75 9.75,8.48"></polygon>
-                        </svg>
-                    </a> -->
                     <a href="https://jwbaek.kr" target="_blank" class="mobile-social-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"></circle>
@@ -92,12 +85,12 @@
                 </a>
             </div>
             <ul class="mobile-menu-list">
-                <li><a href="#" class="mobile-menu-link">HOME</a></li>
-                <li><a href="#" class="mobile-menu-link">ABOUT</a></li>
-                <li><a href="#" class="mobile-menu-link">WORKS</a></li>
-                <li><a href="#" class="mobile-menu-link">STORY</a></li>
-                <li><a href="#" class="mobile-menu-link">CONTACT</a></li>
-                <li><a href="#" class="mobile-menu-link">NOTICE</a></li>
+                <li><a href="index.html" class="mobile-menu-link" data-page="home">HOME</a></li>
+                <li><a href="about.html" class="mobile-menu-link" data-page="about">ABOUT</a></li>
+                <li><a href="works.html" class="mobile-menu-link" data-page="works">WORKS</a></li>
+                <li><a href="story.html" class="mobile-menu-link" data-page="story">STORY</a></li>
+                <li><a href="contact.html" class="mobile-menu-link" data-page="contact">CONTACT</a></li>
+                <li><a href="notice.html" class="mobile-menu-link" data-page="notice">NOTICE</a></li>
             </ul>
         </nav>
     </div>
@@ -117,8 +110,8 @@
                 <!-- Main Navigation -->
                 <nav class="main-nav">
                     <ul class="nav-list">
-                        <li class="nav-item active">
-                            <a href="#" class="nav-link" data-tooltip="HOME">
+                        <li class="nav-item" data-page="home">
+                            <a href="index.html" class="nav-link" data-tooltip="HOME">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                     <polyline points="9,22 9,12 15,12 15,22"></polyline>
@@ -126,8 +119,8 @@
                                 <span class="nav-text">HOME</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-tooltip="ABOUT">
+                        <li class="nav-item" data-page="about">
+                            <a href="about.html" class="nav-link" data-tooltip="ABOUT">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="12" cy="7" r="4"></circle>
@@ -135,8 +128,8 @@
                                 <span class="nav-text">ABOUT</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-tooltip="WORKS">
+                        <li class="nav-item" data-page="works">
+                            <a href="works.html" class="nav-link" data-tooltip="WORKS">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                                     <line x1="8" y1="21" x2="16" y2="21"></line>
@@ -145,8 +138,8 @@
                                 <span class="nav-text">WORKS</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-tooltip="STORY">
+                        <li class="nav-item" data-page="story">
+                            <a href="story.html" class="nav-link" data-tooltip="STORY">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                                     <circle cx="9" cy="9" r="2"></circle>
@@ -155,16 +148,16 @@
                                 <span class="nav-text">STORY</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-tooltip="CONTACT">
+                        <li class="nav-item" data-page="contact">
+                            <a href="contact.html" class="nav-link" data-tooltip="CONTACT">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                                 </svg>
                                 <span class="nav-text">CONTACT</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-tooltip="NOTICE">
+                        <li class="nav-item" data-page="notice">
+                            <a href="notice.html" class="nav-link" data-tooltip="NOTICE">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
                                     <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
@@ -190,7 +183,7 @@
                         </a>
                         
                         <!-- Website -->
-                        <a href="https://oad.st" target="_blank" class="nav-link" data-tooltip="웹사이트">
+                        <a href="https://jwbaek.kr" target="_blank" class="nav-link" data-tooltip="웹사이트">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <line x1="2" y1="12" x2="22" y2="12"></line>
@@ -199,14 +192,6 @@
                             <span class="nav-text">jwbaek.kr</span>
                         </a>
                         
-                        <!-- YouTube -->
-                        <!-- <a href="https://youtube.com/@oadesign" target="_blank" class="nav-link" data-tooltip="유튜브">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                                <polygon points="9.75,15.02 15.5,11.75 9.75,8.48"></polygon>
-                            </svg>
-                            <span class="nav-text">YouTube</span>
-                        </a> -->
                         <!-- Phone -->
                         <a href="tel:+82-10-1234-5678" class="nav-link" data-tooltip="전화">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
