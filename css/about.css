@@ -1,0 +1,587 @@
+/* About Page Styles */
+
+/* About Content Container */
+.about-content {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+/* Introduction Section */
+.about-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.intro-text {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.96);
+    margin-bottom: 1.5rem;
+}
+
+.intro-text:last-child {
+    margin-bottom: 0;
+}
+
+.intro-text strong {
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* About Sections */
+.about-section {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.about-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.about-section:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.about-section:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Differences Grid */
+.differences-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.difference-card {
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .difference-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+} */
+
+.difference-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.15);
+}
+
+/* .difference-card:hover::before {
+    transform: scaleX(1);
+} */
+
+.difference-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.difference-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.difference-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Services List */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-detail {
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-detail:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.1);
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.service-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.service-badge {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.service-features li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.75);
+    padding-left: 2rem;
+    position: relative;
+}
+
+.service-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.service-features li strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Process Timeline */
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.process-step {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+}
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    filter: grayscale(0.3);
+    transition: all 0.3s ease;
+}
+
+.process-step:hover .step-icon {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.step-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.step-subtitle {
+    font-size: 0.95rem;
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.step-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* CTA Section */
+.about-cta {
+    text-align: center;
+    padding: 5rem 3rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    animation: fadeInUp 0.8s ease-out 0.8s;
+    animation-fill-mode: both;
+}
+
+.cta-heading {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-text {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1.2rem 3rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .about-content {
+        padding: 3rem 1.5rem;
+    }
+
+    .about-container {
+        gap: 4rem;
+    }
+
+    .about-intro {
+        padding: 2rem;
+    }
+
+    .intro-text {
+        font-size: 1.05rem;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .section-intro {
+        font-size: 1rem;
+    }
+
+    .differences-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .difference-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .difference-number {
+        font-size: 2.5rem;
+    }
+
+    .difference-title {
+        font-size: 1.3rem;
+    }
+
+    .service-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-title {
+        font-size: 1.5rem;
+    }
+
+    .process-timeline {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .process-timeline::before {
+        display: none;
+    }
+
+    .cta-heading {
+        font-size: 2.2rem;
+    }
+
+    .cta-text {
+        font-size: 1.05rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 2rem 1rem;
+    }
+
+    .about-container {
+        gap: 3rem;
+    }
+
+    .about-intro {
+        padding: 1.5rem;
+    }
+
+    .intro-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .section-heading {
+        font-size: 1.8rem;
+    }
+
+    .section-intro {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .differences-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .difference-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .difference-number {
+        font-size: 2.5rem;
+    }
+
+    .difference-title {
+        font-size: 1.25rem;
+    }
+
+    .difference-description {
+        font-size: 0.95rem;
+    }
+
+    .services-list {
+        gap: 1.5rem;
+    }
+
+    .service-detail {
+        padding: 2rem;
+    }
+
+    .service-title {
+        font-size: 1.3rem;
+    }
+
+    .service-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .service-features li {
+        font-size: 0.95rem;
+        padding-left: 1.5rem;
+    }
+
+    .process-timeline {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .process-step {
+        padding: 1.5rem 1rem;
+    }
+
+    .step-icon {
+        font-size: 2.5rem;
+    }
+
+    .step-title {
+        font-size: 1.2rem;
+    }
+
+    .step-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .step-description {
+        font-size: 0.9rem;
+    }
+
+    .about-cta {
+        padding: 3rem 2rem;
+    }
+
+    .cta-heading {
+        font-size: 1.8rem;
+    }
+
+    .cta-text {
+        font-size: 0.95rem;
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .about-intro {
+        padding: 1.25rem;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .difference-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .difference-number {
+        font-size: 2rem;
+    }
+
+    .difference-title {
+        font-size: 1.1rem;
+    }
+
+    .service-detail {
+        padding: 1.5rem;
+    }
+
+    .service-title {
+        font-size: 1.2rem;
+    }
+
+    .about-cta {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .cta-heading {
+        font-size: 1.6rem;
+    }
+
+    .cta-text {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
