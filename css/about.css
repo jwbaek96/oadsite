@@ -422,6 +422,7 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+    .page-title{font-size: 4.5rem;}
     .about-content {
         padding: 2rem 1rem;
     }
@@ -536,6 +537,7 @@
 
 /* Small Mobile */
 @media (max-width: 480px) {
+    .page-title{font-size: 3.5rem;}
     .about-intro {
         padding: 1.25rem;
     }
