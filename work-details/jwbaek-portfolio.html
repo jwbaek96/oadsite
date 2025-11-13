@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인 포트폴리오 블로그 - 백종훈 - OA Design Studio</title>
+    <meta name="description" content="작가 백종훈의 개인 포트폴리오 및 블로그 웹사이트 개발 프로젝트">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/work-layout.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/icon_32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/icon_16x16.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon/icon_192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../favicon/icon_512x512.png">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/0470599ade.js" crossorigin="anonymous"></script>
+</head>
+<body data-no-auto-footer="true" data-page="works">
+    <!-- Background Video -->
+    <video autoplay muted loop class="background-video">
+        <source src="../assets/bg.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Background Overlay -->
+    <div class="background-overlay"></div>
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="mobile-header-content">
+            <a href="../index.html" class="mobile-logo">
+                <img src="../assets/Logo.png" alt="OA Design Studio" width="65" height="auto">
+            </a>
+            <button class="mobile-menu-toggle" aria-label="메뉴 열기">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="../index.html" class="mobile-menu-logo">
+                    <img src="../assets/Logo.png" alt="OA Design Studio" width="55" height="auto">
+                </a>
+                <button class="mobile-menu-close" aria-label="메뉴 닫기">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu-contacts">
+                <div class="mobile-social-links">
+                    <a href="https://instagram.com/oad.st" target="_blank" class="mobile-social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://jwbaek.kr" target="_blank" class="mobile-social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <a href="tel:+82-10-3432-4396" class="mobile-contact-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    010-3432-4396
+                </a>
+                <a href="mailto:jwbaek96@gmail.com" class="mobile-contact-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    jwbaek96@gmail.com
+                </a>
+            </div>
+            <ul class="mobile-menu-list">
+                <li><a href="../index.html" class="mobile-menu-link" data-page="home">HOME</a></li>
+                <li><a href="../about.html" class="mobile-menu-link" data-page="about">ABOUT</a></li>
+                <li><a href="../story.html" class="mobile-menu-link" data-page="story">STORY</a></li>
+                <li><a href="../works.html" class="mobile-menu-link" data-page="works">WORKS</a></li>
+                <li><a href="../contact.html" class="mobile-menu-link" data-page="contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Desktop Layout -->
+    <div class="instagram-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <!-- Logo -->
+                <div class="logo-section">
+                    <a href="../index.html" class="logo" aria-label="OA Design Studio 홈페이지">
+                        <img src="../assets/Logo.png" alt="OA Design Studio Logo" width="120" height="40">
+                    </a>
+                </div>
+
+                <!-- Main Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item" data-page="home">
+                            <a href="../index.html" class="nav-link" data-tooltip="HOME">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                                </svg>
+                                <span class="nav-text">HOME</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-page="about">
+                            <a href="../about.html" class="nav-link" data-tooltip="ABOUT">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <span class="nav-text">ABOUT</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-page="story">
+                            <a href="../story.html" class="nav-link" data-tooltip="STORY">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                </svg>
+                                <span class="nav-text">STORY</span>
+                            </a>
+                        </li>
+                        <li class="nav-item active" data-page="works">
+                            <a href="../works.html" class="nav-link" data-tooltip="WORKS">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                                <span class="nav-text">WORKS</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-page="contact">
+                            <a href="../contact.html" class="nav-link" data-tooltip="CONTACT">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                <span class="nav-text">CONTACT</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- More Options -->
+                <div class="more-section">
+                    <div class="contact-links">
+                        
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/oad.st" target="_blank" class="nav-link" data-tooltip="인스타그램">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            <span class="nav-text">Instagram</span>
+                        </a>
+                        
+                        <!-- Website -->
+                        <a href="https://jwbaek.kr" target="_blank" class="nav-link" data-tooltip="웹사이트">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            <span class="nav-text">jwbaek.kr</span>
+                        </a>
+                        
+                        <!-- Phone -->
+                        <a href="tel:+82-10-3432-4396" class="nav-link" data-tooltip="전화">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="nav-text">+82-10-3432-4396</span>
+                        </a>
+                        
+                        <!-- Email -->
+                        <a href="mailto:jwbaek96@gmail.com" class="nav-link" data-tooltip="이메일">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span class="nav-text">jwbaek96@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="work-detail-content">
+                <!-- Work Detail Header -->
+                <div class="work-detail-header">
+                    <span class="work-category">Web Development</span>
+                    <h1 class="work-title">개인 포트폴리오 & 블로그</h1>
+                    <p class="work-description">
+                        작가 백종훈의 창작 활동과 일상을 공유하는 개인 포트폴리오 및 블로그 웹사이트입니다. 
+                        미니멀한 디자인과 직관적인 사용자 경험을 통해 작가의 작품과 이야기를 효과적으로 전달합니다.
+                    </p>
+                    
+                    <!-- Work Meta Information -->
+                    <div class="work-meta">
+                        <div class="work-meta-item">
+                            <span class="work-meta-label">Client</span>
+                            <span class="work-meta-value">백종훈 작가</span>
+                        </div>
+                        <div class="work-meta-item">
+                            <span class="work-meta-label">Year</span>
+                            <span class="work-meta-value">2025</span>
+                        </div>
+                        <div class="work-meta-item">
+                            <span class="work-meta-label">Category</span>
+                            <span class="work-meta-value">Web Development</span>
+                        </div>
+                        <div class="work-meta-item">
+                            <span class="work-meta-label">Website</span>
+                            <span class="work-meta-value"><a href="https://jwbaek.kr" target="_blank" style="color: #48dbfb; text-decoration: none;">jwbaek.kr</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Sections -->
+                <div class="work-sections">
+                    <!-- Main Image Slider -->
+                    <section class="work-section">
+                        <div class="work-image-slider">
+                            <div class="slider-container">
+                                <div class="slider-track">
+                                    <img src="../assets/placeholder.jpg" alt="프로젝트 이미지 1" class="work-image">
+                                    <img src="../assets/placeholder.jpg" alt="프로젝트 이미지 2" class="work-image">
+                                    <img src="../assets/placeholder.jpg" alt="프로젝트 이미지 3" class="work-image">
+                                </div>
+                            </div>
+                            <button class="slider-nav prev" aria-label="이전 이미지">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="15,18 9,12 15,6"></polyline>
+                                </svg>
+                            </button>
+                            <button class="slider-nav next" aria-label="다음 이미지">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9,18 15,12 9,6"></polyline>
+                                </svg>
+                            </button>
+                            <div class="slider-dots"></div>
+                        </div>
+                    </section>
+
+                    <!-- Project Overview -->
+                    <section class="work-section">
+                        <h2 class="work-section-title">프로젝트 개요</h2>
+                        <div class="work-section-content">
+                            <p>
+                                작가 백종훈은 자신의 창작 활동과 일상의 이야기를 공유할 수 있는 온라인 공간을 원했습니다. 
+                                단순히 작품을 나열하는 것이 아닌, 창작 과정과 생각의 흐름을 독자들과 공유하며 
+                                소통할 수 있는 플랫폼이 필요했습니다.
+                            </p>
+                            <p>
+                                이 프로젝트는 포트폴리오와 블로그의 기능을 통합하여, 
+                                작가의 정체성을 효과적으로 표현하면서도 방문자들이 편안하게 콘텐츠를 소비할 수 있는 
+                                웹사이트를 구축하는 것을 목표로 했습니다.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Design Process -->
+                    <section class="work-section">
+                        <h2 class="work-section-title">디자인 접근</h2>
+                        <div class="work-section-content">
+                            <p>
+                                미니멀리즘을 기반으로 한 디자인 시스템을 구축했습니다. 
+                                타이포그래피를 중심으로 한 레이아웃은 콘텐츠에 집중할 수 있게 하며, 
+                                절제된 색상 팔레트는 작가의 작품이 돋보이도록 합니다.
+                            </p>
+                            <p>
+                                반응형 디자인을 통해 모바일과 데스크톱 환경 모두에서 
+                                최적화된 읽기 경험을 제공합니다. 특히 블로그 포스팅의 가독성에 중점을 두어 
+                                적절한 행간과 문단 간격을 설정했습니다.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Key Features -->
+                    <section class="work-section">
+                        <h2 class="work-section-title">주요 기능</h2>
+                        <div class="work-section-content">
+                            <ul style="color: rgba(255, 255, 255, 0.8); font-size: 1.1rem; line-height: 1.8; list-style: none; padding-left: 0;">
+                                <li style="margin-bottom: 15px;">📝 <strong>블로그 시스템</strong> - 마크다운 기반의 글쓰기 및 관리</li>
+                                <li style="margin-bottom: 15px;">🎨 <strong>포트폴리오 갤러리</strong> - 작품을 효과적으로 전시하는 그리드 레이아웃</li>
+                                <li style="margin-bottom: 15px;">🔍 <strong>검색 및 카테고리</strong> - 태그와 카테고리를 통한 콘텐츠 분류</li>
+                                <li style="margin-bottom: 15px;">📱 <strong>반응형 디자인</strong> - 모든 디바이스에 최적화된 레이아웃</li>
+                                <li style="margin-bottom: 15px;">⚡ <strong>빠른 로딩 속도</strong> - 최적화된 이미지와 코드로 빠른 페이지 로드</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Results -->
+                    <section class="work-section">
+                        <h2 class="work-section-title">결과 및 성과</h2>
+                        <div class="work-section-content">
+                            <p>
+                                웹사이트 런칭 후 작가의 온라인 존재감이 크게 향상되었습니다. 
+                                깔끔한 디자인과 직관적인 네비게이션으로 방문자들의 체류 시간이 증가했으며, 
+                                블로그 포스팅을 통한 독자들과의 소통이 활발해졌습니다.
+                            </p>
+                            <p>
+                                작가는 이 플랫폼을 통해 자신의 작품과 생각을 자유롭게 공유하며, 
+                                개인 브랜딩을 구축해가고 있습니다. 현재 jwbaek.kr은 작가 백종훈의 
+                                디지털 아이덴티티를 대표하는 공간으로 자리잡았습니다.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Back to Works Button -->
+                <a href="../works.html" class="back-to-works">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12,19 5,12 12,5"></polyline>
+                    </svg>
+                    작업 목록으로 돌아가기
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-top">
+                        <div class="footer-section">
+                            <h3 class="footer-title">OA Design Studio</h3>
+                            <p class="footer-description">
+                                창의적인 디자인으로 브랜드 스토리를 만들어갑니다.<br>
+                                Creative design solutions for your brand story.
+                            </p>
+                            <div class="footer-social">
+                                <a href="https://instagram.com/oad.st" target="_blank" class="footer-social-link" aria-label="Instagram">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </a>
+                                <a href="https://oad.st" target="_blank" class="footer-social-link" aria-label="Website">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 class="footer-subtitle">Services</h4>
+                            <ul class="footer-links">
+                                <li><a href="#" class="footer-link">Web Development</a></li>
+                                <li><a href="#" class="footer-link">Print Design</a></li>
+                                <li><a href="#" class="footer-link">PPT Design</a></li>
+                                <li><a href="#" class="footer-link">AI Content</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 class="footer-subtitle">Company</h4>
+                            <ul class="footer-links">
+                                <li><a href="../about.html" class="footer-link">About Us</a></li>
+                                <li><a href="../works.html" class="footer-link">Our Works</a></li>
+                                <li><a href="../story.html" class="footer-link">Story</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4 class="footer-subtitle">Contact</h4>
+                            <div class="footer-contact">
+                                <p class="footer-contact-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    Seoul, South Korea
+                                </p>
+                                <a href="tel:+82-10-3432-4396" class="footer-contact-item footer-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                    +82-10-3432-4396
+                                </a>
+                                <a href="mailto:jwbaek96@gmail.com" class="footer-contact-item footer-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                    jwbaek96@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom">
+                        <div class="footer-bottom-content">
+                            <p class="footer-copyright">ⓒ2025 OA DESIGN STUDIO. ALL RIGHTS RESERVED.</p>
+                            <div class="footer-legal">
+                                <a href="#" class="footer-legal-link">Privacy Policy</a>
+                                <a href="#" class="footer-legal-link">Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div class="image-lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="닫기">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <img src="" alt="" class="lightbox-image">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/instagram-style.js"></script>
+    <script>
+        // Image Slider Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.work-image-slider');
+            if (!slider) return;
+
+            const track = slider.querySelector('.slider-track');
+            const slides = track.querySelectorAll('.work-image');
+            const prevBtn = slider.querySelector('.prev');
+            const nextBtn = slider.querySelector('.next');
+            const dotsContainer = slider.querySelector('.slider-dots');
+
+            let currentIndex = 0;
+            const slideCount = slides.length;
+
+            // Create dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('slider-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = dotsContainer.querySelectorAll('.slider-dot');
+
+            function updateSlider() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                updateSlider();
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateSlider();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateSlider();
+            }
+
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+
+            // Auto slide every 5 seconds
+            setInterval(nextSlide, 5000);
+
+            // Image Lightbox
+            const lightbox = document.querySelector('.image-lightbox');
+            const lightboxImage = lightbox.querySelector('.lightbox-image');
+            const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+            // Add click event to all work images
+            document.querySelectorAll('.work-image').forEach(img => {
+                img.addEventListener('click', function() {
+                    lightboxImage.src = this.src;
+                    lightboxImage.alt = this.alt;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            // Close lightbox
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // ESC key to close
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
