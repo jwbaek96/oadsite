@@ -6,67 +6,67 @@ class InstagramApp {
 
     init() {
         this.setupEventListeners();
-        this.setupIntersectionObserver();
-        this.loadMorePosts();
+        // this.setupIntersectionObserver(); // 비활성화
+        // this.loadMorePosts(); // 비활성화
     }
 
     setupEventListeners() {
-        // Like button functionality
-        document.querySelectorAll('.like-btn').forEach(btn => {
-            btn.addEventListener('click', this.handleLike.bind(this));
-        });
+        // Like button functionality - 비활성화
+        // document.querySelectorAll('.like-btn').forEach(btn => {
+        //     btn.addEventListener('click', this.handleLike.bind(this));
+        // });
 
-        // Follow button functionality
-        document.querySelectorAll('.follow-btn').forEach(btn => {
-            btn.addEventListener('click', this.handleFollow.bind(this));
-        });
+        // Follow button functionality - 비활성화
+        // document.querySelectorAll('.follow-btn').forEach(btn => {
+        //     btn.addEventListener('click', this.handleFollow.bind(this));
+        // });
 
-        // Navigation clicks
-        document.querySelectorAll('.nav-link, .mobile-nav-item').forEach(link => {
-            link.addEventListener('click', this.handleNavigation.bind(this));
-        });
+        // Navigation clicks - 비활성화
+        // document.querySelectorAll('.nav-link, .mobile-nav-item').forEach(link => {
+        //     link.addEventListener('click', this.handleNavigation.bind(this));
+        // });
 
-        // Story clicks
-        document.querySelectorAll('.story-item').forEach(story => {
-            story.addEventListener('click', this.handleStoryClick.bind(this));
-        });
+        // Story clicks - 비활성화
+        // document.querySelectorAll('.story-item').forEach(story => {
+        //     story.addEventListener('click', this.handleStoryClick.bind(this));
+        // });
 
-        // Post options
-        document.querySelectorAll('.post-options').forEach(btn => {
-            btn.addEventListener('click', this.handlePostOptions.bind(this));
-        });
+        // Post options - 비활성화
+        // document.querySelectorAll('.post-options').forEach(btn => {
+        //     btn.addEventListener('click', this.handlePostOptions.bind(this));
+        // });
 
-        // Comment button
-        document.querySelectorAll('.comment-btn').forEach(btn => {
-            btn.addEventListener('click', this.handleComment.bind(this));
-        });
+        // Comment button - 비활성화
+        // document.querySelectorAll('.comment-btn').forEach(btn => {
+        //     btn.addEventListener('click', this.handleComment.bind(this));
+        // });
 
-        // Share button
-        document.querySelectorAll('.share-btn').forEach(btn => {
-            btn.addEventListener('click', this.handleShare.bind(this));
-        });
+        // Share button - 비활성화
+        // document.querySelectorAll('.share-btn').forEach(btn => {
+        //     btn.addEventListener('click', this.handleShare.bind(this));
+        // });
 
-        // Bookmark button
-        document.querySelectorAll('.bookmark-btn').forEach(btn => {
-            btn.addEventListener('click', this.handleBookmark.bind(this));
-        });
+        // Bookmark button - 비활성화
+        // document.querySelectorAll('.bookmark-btn').forEach(btn => {
+        //     btn.addEventListener('click', this.handleBookmark.bind(this));
+        // });
 
-        // View comments
-        document.querySelectorAll('.view-comments').forEach(btn => {
-            btn.addEventListener('click', this.handleViewComments.bind(this));
-        });
+        // View comments - 비활성화
+        // document.querySelectorAll('.view-comments').forEach(btn => {
+        //     btn.addEventListener('click', this.handleViewComments.bind(this));
+        // });
 
-        // Mobile navigation
-        this.setupMobileNavigation();
+        // Mobile navigation - 비활성화
+        // this.setupMobileNavigation();
 
-        // Mobile menu toggle
+        // Mobile menu toggle - 유지
         this.setupMobileMenu();
 
-        // Services accordion
+        // Services accordion - 유지
         this.setupServicesAccordion();
 
-        // Keyboard navigation
-        this.setupKeyboardNavigation();
+        // Keyboard navigation - 비활성화
+        // this.setupKeyboardNavigation();
     }
 
     handleLike(e) {
