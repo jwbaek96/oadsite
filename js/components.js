@@ -12,7 +12,7 @@ function loadMobileHeader() {
     const container = document.getElementById('mobile-header-container');
     if (!container) return;
     
-    fetch('templates/mobile-header.html')
+    fetch('/templates/mobile-header.html')
         .then(response => response.text())
         .then(html => {
             const cleanedHtml = html.replace(/<script[^>]*>[\s\S]*?live-server[\s\S]*?<\/script>/gi, '');
@@ -27,7 +27,7 @@ function loadMobileMenuOverlay() {
     const container = document.getElementById('mobile-menu-overlay-container');
     if (!container) return;
     
-    fetch('templates/mobile-menu-overlay.html')
+    fetch('/templates/mobile-menu-overlay.html')
         .then(response => response.text())
         .then(html => {
             const cleanedHtml = html.replace(/<script[^>]*>[\s\S]*?live-server[\s\S]*?<\/script>/gi, '');
@@ -45,7 +45,7 @@ function loadSidebar() {
     const container = document.getElementById('sidebar-container');
     if (!container) return;
     
-    fetch('templates/sidebar.html')
+    fetch('/templates/sidebar.html')
         .then(response => response.text())
         .then(html => {
             const cleanedHtml = html.replace(/<script[^>]*>[\s\S]*?live-server[\s\S]*?<\/script>/gi, '');
@@ -69,7 +69,7 @@ function loadFooter() {
 
     console.log('📦 Loading footer...');
 
-    fetch('templates/footer.html')
+    fetch('/templates/footer.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
