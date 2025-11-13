@@ -1,6 +1,6 @@
-// Component Loader - Load reusable components (footer, header, etc.)
+// Component Loader for work-details folder - Load reusable components with adjusted paths
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 Components.js loaded');
+    console.log('🚀 Components2.js loaded (work-details version)');
     loadMobileHeader();
     loadMobileMenuOverlay();
     loadSidebar();
@@ -12,12 +12,12 @@ function loadMobileHeader() {
     const container = document.getElementById('mobile-header-container');
     if (!container) return;
     
-    fetch('templates/mobile-header.html')
+    fetch('../templates/mobile-header2.html')
         .then(response => response.text())
         .then(html => {
             const cleanedHtml = html.replace(/<script[^>]*>[\s\S]*?live-server[\s\S]*?<\/script>/gi, '');
             container.innerHTML = cleanedHtml;
-            console.log('✅ Mobile header loaded');
+            console.log('✅ Mobile header loaded (work-details)');
         })
         .catch(error => console.error('❌ Error loading mobile header:', error));
 }
@@ -27,12 +27,12 @@ function loadMobileMenuOverlay() {
     const container = document.getElementById('mobile-menu-overlay-container');
     if (!container) return;
     
-    fetch('templates/mobile-menu-overlay.html')
+    fetch('../templates/mobile-menu-overlay2.html')
         .then(response => response.text())
         .then(html => {
             const cleanedHtml = html.replace(/<script[^>]*>[\s\S]*?live-server[\s\S]*?<\/script>/gi, '');
             container.innerHTML = cleanedHtml;
-            console.log('✅ Mobile menu overlay loaded');
+            console.log('✅ Mobile menu overlay loaded (work-details)');
             
             // Initialize mobile menu handlers after loading
             initializeMobileMenu();
@@ -45,12 +45,12 @@ function loadSidebar() {
     const container = document.getElementById('sidebar-container');
     if (!container) return;
     
-    fetch('templates/sidebar.html')
+    fetch('../templates/sidebar2.html')
         .then(response => response.text())
         .then(html => {
             const cleanedHtml = html.replace(/<script[^>]*>[\s\S]*?live-server[\s\S]*?<\/script>/gi, '');
             container.innerHTML = cleanedHtml;
-            console.log('✅ Sidebar loaded');
+            console.log('✅ Sidebar loaded (work-details)');
             
             // Set active page after loading
             setActivePage();
@@ -69,7 +69,7 @@ function loadFooter() {
 
     console.log('📦 Loading footer...');
 
-    fetch('templates/footer.html')
+    fetch('../templates/footer2.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -79,7 +79,7 @@ function loadFooter() {
         .then(html => {
             // Remove live-server injected scripts that break HTML structure
             const cleanedHtml = html.replace(/<script[^>]*>[\s\S]*?live-server[\s\S]*?<\/script>/gi, '');
-            console.log('✅ Footer loaded and cleaned');
+            console.log('✅ Footer loaded and cleaned (work-details)');
             footerContainer.innerHTML = cleanedHtml;
         })
         .catch(error => {
