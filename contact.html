@@ -227,6 +227,15 @@
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
+                console.log('🚀 폼 제출 시작');
+                
+                // 전송할 데이터 확인
+                const formData = new FormData(form);
+                console.log('📝 전송 데이터:');
+                for (let [key, value] of formData.entries()) {
+                    console.log(`  ${key}: ${value}`);
+                }
+                
                 // Show loading state
                 submitButton.disabled = true;
                 submitButton.innerHTML = `
@@ -242,31 +251,75 @@
                 iframe.style.display = 'none';
                 document.body.appendChild(iframe);
                 
+                console.log('📡 iframe 생성 완료, Apps Script URL:', SCRIPT_URL);
+                
+                // iframe load 이벤트 리스너 추가 (디버깅용)
+                iframe.onload = function() {
+                    console.log('✅ iframe 로드 완료 - Apps Script 응답 받음');
+                    try {
+                        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                        const responseText = iframeDoc.body.textContent;
+                        console.log('📄 Apps Script 응답:', responseText);
+                        
+                        // JSON 파싱 시도
+                        try {
+                            const jsonResponse = JSON.parse(responseText);
+                            console.log('✅ JSON 파싱 성공:', jsonResponse);
+                            
+                            if (jsonResponse.status === 'success') {
+                                console.log('🎉 성공 응답 확인됨');
+                                showMessage('문의가 성공적으로 전송되었습니다! 시트를 확인해주세요.', 'success');
+                            } else {
+                                console.log('❌ 실패 응답:', jsonResponse.message);
+                                showMessage('오류: ' + jsonResponse.message, 'error');
+                            }
+                        } catch (parseError) {
+                            console.log('⚠️ JSON 파싱 실패, 원본 응답:', responseText);
+                            showMessage('문의가 전송되었습니다. (응답 확인 불가)', 'success');
+                        }
+                    } catch (accessError) {
+                        console.log('⚠️ iframe 내용 접근 불가 (CORS 제한)');
+                        showMessage('문의가 전송되었습니다. 시트를 직접 확인해주세요.', 'success');
+                    }
+                    
+                    // 정리
+                    form.reset();
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = buttonText;
+                    
+                    setTimeout(() => {
+                        document.body.removeChild(iframe);
+                        form.removeAttribute('target');
+                        form.removeAttribute('action');
+                        form.removeAttribute('method');
+                        console.log('🧹 정리 완료');
+                    }, 1000);
+                };
+                
                 // Set form target to iframe
                 form.target = 'hidden_iframe';
                 form.action = SCRIPT_URL;
                 form.method = 'POST';
                 
+                console.log('📤 폼 제출 중...');
+                
                 // Submit form
                 form.submit();
                 
-                // Handle success (assume success after 2 seconds)
+                // 타임아웃 처리 (10초 후)
                 setTimeout(() => {
-                    showMessage('문의가 성공적으로 전송되었습니다! 24시간 이내에 답변드리겠습니다.', 'success');
-                    form.reset();
-                    
-                    // Reset button
-                    submitButton.disabled = false;
-                    submitButton.innerHTML = buttonText;
-                    
-                    // Remove iframe
-                    document.body.removeChild(iframe);
-                    
-                    // Reset form target
-                    form.removeAttribute('target');
-                    form.removeAttribute('action');
-                    form.removeAttribute('method');
-                }, 2000);
+                    if (document.body.contains(iframe)) {
+                        console.log('⏰ 타임아웃 - 10초 경과');
+                        showMessage('응답 시간이 초과되었습니다. 시트를 직접 확인해주세요.', 'error');
+                        
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = buttonText;
+                        document.body.removeChild(iframe);
+                        form.removeAttribute('target');
+                        form.removeAttribute('action');
+                        form.removeAttribute('method');
+                    }
+                }, 10000);
             });
             
             function showMessage(message, type) {
