@@ -222,9 +222,9 @@
             const buttonText = submitButton.innerHTML;
             
             // 여기에 Apps Script 웹앱 URL을 넣으세요
-            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwgmpv2ZFYE9jxhOHU1zw0cbzwwDlYiFTc5lP7cEizZGO4uyAT1-cQuVFNJWATPz4F4Mg/exec';
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxvKdFBtRR6DNW96-GAJ_sDjzwIe_jApU9MhlZXJvEmXTrRJWM9AtCrofL540eT_Oi4wg/exec';
             
-            form.addEventListener('submit', async function(e) {
+            form.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
                 // Show loading state
@@ -236,30 +236,37 @@
                     </svg>
                 `;
                 
-                try {
-                    const formData = new FormData(form);
+                // Create hidden iframe for form submission
+                const iframe = document.createElement('iframe');
+                iframe.name = 'hidden_iframe';
+                iframe.style.display = 'none';
+                document.body.appendChild(iframe);
+                
+                // Set form target to iframe
+                form.target = 'hidden_iframe';
+                form.action = SCRIPT_URL;
+                form.method = 'POST';
+                
+                // Submit form
+                form.submit();
+                
+                // Handle success (assume success after 2 seconds)
+                setTimeout(() => {
+                    showMessage('문의가 성공적으로 전송되었습니다! 24시간 이내에 답변드리겠습니다.', 'success');
+                    form.reset();
                     
-                    const response = await fetch(SCRIPT_URL, {
-                        method: 'POST',
-                        body: formData
-                    });
-                    
-                    const result = await response.json();
-                    
-                    if (result.status === 'success') {
-                        showMessage('문의가 성공적으로 전송되었습니다! 24시간 이내에 답변드리겠습니다.', 'success');
-                        form.reset();
-                    } else {
-                        throw new Error(result.message || '전송에 실패했습니다.');
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                    showMessage('전송 중 오류가 발생했습니다. 다시 시도해주세요.', 'error');
-                } finally {
                     // Reset button
                     submitButton.disabled = false;
                     submitButton.innerHTML = buttonText;
-                }
+                    
+                    // Remove iframe
+                    document.body.removeChild(iframe);
+                    
+                    // Reset form target
+                    form.removeAttribute('target');
+                    form.removeAttribute('action');
+                    form.removeAttribute('method');
+                }, 2000);
             });
             
             function showMessage(message, type) {
