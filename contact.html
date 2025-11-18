@@ -110,16 +110,18 @@
                     </article>
 
                     <!-- Quick Contact Form -->
+                    
                     <article class="contact-form-section">
                         <h2 class="section-heading">빠른 문의</h2>
                         <p class="section-intro">
                             간단한 정보를 남겨주시면 빠르게 연락드리겠습니다.
                         </p>
                         
-                        <!-- Hidden iframe for Google Forms (embedded but invisible) -->
-                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                        <!-- Google Forms Embed -->
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7PkRk85zEuFlE-FU1Yv-plo0Ce7HfDmY_uqUbyDuwNq8maQ/viewform?embedded=true" width="100%" height="958" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>
                         
-                        <form class="contact-form" id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc7PkRk85zEuFlE-FU1Yv-plo0Ce7HfDmY_uqUbyDuwNq8maQ/formResponse" target="hidden_iframe" method="POST">
+                        <!-- Custom Form (Currently Disabled) -->
+                        <!-- <form class="contact-form" id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc7PkRk85zEuFlE-FU1Yv-plo0Ce7HfDmY_uqUbyDuwNq8maQ/formResponse" target="hidden_iframe" method="POST">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="name" class="form-label">이름 <span class="required">*</span></label>
@@ -155,7 +157,10 @@
                                     <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                                 </svg>
                             </button>
-                        </form>
+                        </form> -->
+                        
+                        <!-- Hidden iframe for custom form submission (if needed) -->
+                        <!-- <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe> -->
                     </article>
 
                     <!-- Business Info -->
@@ -215,108 +220,5 @@
 
     <!-- Scripts -->
     <script src="js/components.js"></script>
-    <script>
-        // Contact Form Handler - Google Forms with Custom Design
-        let submitted = false;
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('contactForm');
-            const messagesDiv = document.getElementById('form-messages');
-            const submitButton = form.querySelector('.submit-button');
-            const buttonText = submitButton.innerHTML;
-            
-            // Listen to iframe load (form submission complete)
-            document.getElementById('hidden_iframe').onload = function() {
-                if (submitted) {
-                    showMessage('문의가 성공적으로 전송되었습니다!', 'success');
-                    form.reset();
-                    submitButton.disabled = false;
-                    submitButton.innerHTML = buttonText;
-                    submitted = false;
-                }
-            };
-            
-            form.addEventListener('submit', function(e) {
-                // Show loading state
-                submitButton.disabled = true;
-                submitButton.innerHTML = '전송 중...';
-                submitted = true;
-                
-                // Form will submit to hidden iframe automatically
-            });
-            
-            function showMessage(message, type) {
-                messagesDiv.innerHTML = `
-                    <div class="form-message form-message-${type}">
-                        ${type === 'success' ? 
-                            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22,4 12,14.01 9,11.01"></polyline></svg>' :
-                            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>'
-                        }
-                        ${message}
-                    </div>
-                `;
-                
-                // Auto hide after 5 seconds
-                setTimeout(() => {
-                    messagesDiv.innerHTML = '';
-                }, 5000);
-            }
-        });
-    </script>
-    
-    <style>
-        .form-messages {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            max-width: 400px;
-        }
-        
-        .form-message {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            backdrop-filter: blur(10px);
-            animation: slideIn 0.3s ease-out;
-        }
-        
-        .form-message-success {
-            background: rgba(34, 197, 94, 0.9);
-            color: white;
-            border: 1px solid rgba(34, 197, 94, 0.3);
-        }
-        
-        .form-message-error {
-            background: rgba(239, 68, 68, 0.9);
-            color: white;
-            border: 1px solid rgba(239, 68, 68, 0.3);
-        }
-        
-        @keyframes slideIn {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .form-messages {
-                top: 10px;
-                right: 10px;
-                left: 10px;
-                max-width: none;
-            }
-        }
-    </style>
 </body>
 </html>
