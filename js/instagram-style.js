@@ -69,8 +69,6 @@ class InstagramApp {
         // this.setupKeyboardNavigation();
     }
 
-    }
-
     // 기존 메서드들...
     handleLike(event) {
         e.preventDefault();
