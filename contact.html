@@ -116,34 +116,36 @@
                             간단한 정보를 남겨주시면 빠르게 연락드리겠습니다.
                         </p>
                         
-                        <form class="contact-form" id="contactForm">
+                        <!-- Hidden iframe for Google Forms (embedded but invisible) -->
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                        
+                        <form class="contact-form" id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc7PkRk85zEuFlE-FU1Yv-plo0Ce7HfDmY_uqUbyDuwNq8maQ/formResponse" target="hidden_iframe" method="POST">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="name" class="form-label">이름 <span class="required">*</span></label>
-                                    <input type="text" id="name" name="name" class="form-input" placeholder="홍길동" required>
+                                    <input type="text" id="name" name="entry.883059956" class="form-input" placeholder="홍길동" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email" class="form-label">이메일 <span class="required">*</span></label>
-                                    <input type="email" id="email" name="email" class="form-input" placeholder="example@email.com" required>
+                                    <input type="email" id="email" name="entry.2012070964" class="form-input" placeholder="example@email.com" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="projectType" class="form-label">프로젝트 타입</label>
-                                <select id="projectType" name="projectType" class="form-select">
+                                <select id="projectType" name="entry.2009046898" class="form-select">
                                     <option value="">선택해주세요</option>
                                     <option value="website">웹사이트 제작</option>
                                     <option value="print">인쇄물 디자인</option>
                                     <option value="ppt">PPT/IR 디자인</option>
                                     <option value="ai">AI 콘텐츠 제작</option>
-                                    <option value="branding">브랜딩/아이덴티티</option>
                                     <option value="other">기타</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
                                 <label for="message" class="form-label">메시지</label>
-                                <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="프로젝트에 대해 간단히 설명해주세요."></textarea>
+                                <textarea id="message" name="entry.1600038202" class="form-textarea" rows="6" placeholder="프로젝트에 대해 간단히 설명해주세요."></textarea>
                             </div>
 
                             <button type="submit" class="submit-button">
@@ -214,112 +216,33 @@
     <!-- Scripts -->
     <script src="js/components.js"></script>
     <script>
-        // Contact Form Handler - Direct to Google Sheets
+        // Contact Form Handler - Google Forms with Custom Design
+        let submitted = false;
+        
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('contactForm');
             const messagesDiv = document.getElementById('form-messages');
             const submitButton = form.querySelector('.submit-button');
             const buttonText = submitButton.innerHTML;
             
-            // 여기에 Apps Script 웹앱 URL을 넣으세요
-            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzqVHZIlxGX2y_1niUZnp7u7GsEw9Dgz9Fg0pGtBZLd8uWJrKbz58NtyOcBfr_YTrA6Zw/exec';
-            
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                console.log('🚀 폼 제출 시작');
-                
-                // 전송할 데이터 확인
-                const formData = new FormData(form);
-                console.log('📝 전송 데이터:');
-                for (let [key, value] of formData.entries()) {
-                    console.log(`  ${key}: ${value}`);
-                }
-                
-                // Show loading state
-                submitButton.disabled = true;
-                submitButton.innerHTML = `
-                    전송 중...
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="loading-spinner">
-                        <circle cx="12" cy="12" r="10"></circle>
-                    </svg>
-                `;
-                
-                // Create hidden iframe for form submission
-                const iframe = document.createElement('iframe');
-                iframe.name = 'hidden_iframe';
-                iframe.style.display = 'none';
-                document.body.appendChild(iframe);
-                
-                console.log('📡 iframe 생성 완료, Apps Script URL:', SCRIPT_URL);
-                
-                // iframe load 이벤트 리스너 추가 (디버깅용)
-                iframe.onload = function() {
-                    console.log('✅ iframe 로드 완료 - Apps Script 응답 받음');
-                    try {
-                        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-                        const responseText = iframeDoc.body.textContent;
-                        console.log('📄 Apps Script 응답:', responseText);
-                        
-                        // JSON 파싱 시도
-                        try {
-                            const jsonResponse = JSON.parse(responseText);
-                            console.log('✅ JSON 파싱 성공:', jsonResponse);
-                            
-                            if (jsonResponse.status === 'success') {
-                                console.log('🎉 성공 응답 확인됨');
-                                showMessage('문의가 성공적으로 전송되었습니다! 시트를 확인해주세요.', 'success');
-                            } else {
-                                console.log('❌ 실패 응답:', jsonResponse.message);
-                                showMessage('오류: ' + jsonResponse.message, 'error');
-                            }
-                        } catch (parseError) {
-                            console.log('⚠️ JSON 파싱 실패, 원본 응답:', responseText);
-                            showMessage('문의가 전송되었습니다. (응답 확인 불가)', 'success');
-                        }
-                    } catch (accessError) {
-                        console.log('⚠️ iframe 내용 접근 불가 (CORS 제한)');
-                        showMessage('문의가 전송되었습니다. 시트를 직접 확인해주세요.', 'success');
-                    }
-                    
-                    // 정리
+            // Listen to iframe load (form submission complete)
+            document.getElementById('hidden_iframe').onload = function() {
+                if (submitted) {
+                    showMessage('문의가 성공적으로 전송되었습니다!', 'success');
                     form.reset();
                     submitButton.disabled = false;
                     submitButton.innerHTML = buttonText;
-                    
-                    setTimeout(() => {
-                        document.body.removeChild(iframe);
-                        form.removeAttribute('target');
-                        form.removeAttribute('action');
-                        form.removeAttribute('method');
-                        console.log('🧹 정리 완료');
-                    }, 1000);
-                };
+                    submitted = false;
+                }
+            };
+            
+            form.addEventListener('submit', function(e) {
+                // Show loading state
+                submitButton.disabled = true;
+                submitButton.innerHTML = '전송 중...';
+                submitted = true;
                 
-                // Set form target to iframe
-                form.target = 'hidden_iframe';
-                form.action = SCRIPT_URL;
-                form.method = 'POST';
-                
-                console.log('📤 폼 제출 중...');
-                
-                // Submit form
-                form.submit();
-                
-                // 타임아웃 처리 (10초 후)
-                setTimeout(() => {
-                    if (document.body.contains(iframe)) {
-                        console.log('⏰ 타임아웃 - 10초 경과');
-                        showMessage('응답 시간이 초과되었습니다. 시트를 직접 확인해주세요.', 'error');
-                        
-                        submitButton.disabled = false;
-                        submitButton.innerHTML = buttonText;
-                        document.body.removeChild(iframe);
-                        form.removeAttribute('target');
-                        form.removeAttribute('action');
-                        form.removeAttribute('method');
-                    }
-                }, 10000);
+                // Form will submit to hidden iframe automatically
             });
             
             function showMessage(message, type) {
@@ -375,10 +298,6 @@
             border: 1px solid rgba(239, 68, 68, 0.3);
         }
         
-        .loading-spinner {
-            animation: spin 1s linear infinite;
-        }
-        
         @keyframes slideIn {
             from {
                 transform: translateX(100%);
@@ -388,16 +307,6 @@
                 transform: translateX(0);
                 opacity: 1;
             }
-        }
-        
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        .submit-button:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
         }
         
         @media (max-width: 768px) {
