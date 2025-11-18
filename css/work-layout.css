@@ -101,6 +101,29 @@
     margin-bottom: 30px;
 }
 
+/* Video Container Styles */
+.work-video-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.work-video {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    background: #000;
+}
+
+.video-description {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
 .slider-container {
     position: relative;
     width: 100%;
@@ -285,6 +308,10 @@
     .slider-container {
         height: 400px; /* 태블릿에서 중간 높이 */
     }
+
+    .work-video {
+        /* 태블릿에서도 max-height 제한 제거 */
+    }
 }
 
 /* Mobile Styles */
@@ -319,6 +346,10 @@
 
     .slider-container {
         height: 300px; /* 모바일에서 더 작은 높이 */
+    }
+
+    .work-video {
+        /* 모바일에서도 max-height 제한 제거 */
     }
 
     .slider-nav {
