@@ -64,7 +64,7 @@
                         </div>
                         <div class="work-meta-item">
                             <span class="work-meta-label">Year</span>
-                            <span class="work-meta-value">2024</span>
+                            <span class="work-meta-value">2025</span>
                         </div>
                         <div class="work-meta-item">
                             <span class="work-meta-label">Category</span>
@@ -79,14 +79,14 @@
 
                 <!-- Work Sections -->
                 <div class="work-sections">
-                    <!-- Main Image Slider -->
+                    <!-- Main Image Section -->
                     <section class="work-section">
                         <div class="work-image-slider">
                             <div class="slider-container">
                                 <div class="slider-track">
-                                    <img src="../assets/ini.jpeg" alt="프로젝트 이미지 1" class="work-image">
-                                    <img src="../assets/placeholder.jpg" alt="프로젝트 이미지 2" class="work-image">
-                                    <img src="../assets/placeholder.jpg" alt="프로젝트 이미지 3" class="work-image">
+                                    <div class="slide-image-container">
+                                        <img src="../assets/ini.jpeg" alt="인사이트넥서스연구원 웹사이트" class="work-image">
+                                    </div>
                                 </div>
                             </div>
                             <button class="slider-nav prev" aria-label="이전 이미지">
@@ -374,7 +374,7 @@
             if (!slider) return;
 
             const track = slider.querySelector('.slider-track');
-            const slides = track.querySelectorAll('.work-image');
+            const slides = track.querySelectorAll('.slide-image-container');
             const prevBtn = slider.querySelector('.prev');
             const nextBtn = slider.querySelector('.next');
             const dotsContainer = slider.querySelector('.slider-dots');
@@ -457,6 +457,55 @@
             });
         });
     </script>
+
+    <style>
+        /* Custom styles for image container */
+        .slide-image-container {
+            width: 100%;
+            height: 500px; /* Fixed height for container */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .slide-image-container .work-image {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .slide-image-container .work-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Override slider track to use flex */
+        .work-image-slider .slider-track {
+            display: flex !important;
+            transition: transform 0.3s ease;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .slide-image-container {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide-image-container {
+                height: 250px;
+            }
+        }
+    </style>
+
     <!-- Scripts -->
     <script src="../js/components2.js"></script>
     <script src="../js/instagram-style.js"></script>
