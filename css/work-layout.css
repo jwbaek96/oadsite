@@ -130,7 +130,7 @@
     height: 500px; /* 고정 높이 설정 */
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); */
 }
 
 .slider-track {

@@ -69,7 +69,10 @@ class InstagramApp {
         // this.setupKeyboardNavigation();
     }
 
-    handleLike(e) {
+    }
+
+    // 기존 메서드들...
+    handleLike(event) {
         e.preventDefault();
         const btn = e.currentTarget;
         const svg = btn.querySelector('svg');
