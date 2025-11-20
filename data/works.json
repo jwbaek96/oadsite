@@ -97,16 +97,16 @@
       "enabled": true
     },
     {
-      "id": "aircon-education",
+      "id": "lg-aircon-education",
       "category": "ppt",
-      "title": "에어컨 교육",
-      "description": "전문적인 기업 발표",
-      "image": "https://via.placeholder.com/400x300/ff6b6b/ffffff?text=Business",
-      "link": "#",
-      "target": "_self",
+      "title": "LG 에어컨 교육용 인터랙티브 PPT",
+      "description": "웹사이트형 인터랙티브 에어컨 기술 교육 PPT 자료",
+      "image": "assets/스크린샷 2025-11-20 092354.png",
+      "link": "work-details/lg-aircon-education.html",
+      "target": "_self",  
       "date": "2025",
       "client": "PPT Design",
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "performance-report",
